@@ -8,4 +8,6 @@ jobs:
   ccstjencrypt:
     uses: ./.github/workflows/basicCI.yml
     with:
-      SOURC
+      SOURCE: CCS
+      TARGET: TJ
+      ACTION: ENCRYPT
