@@ -10,4 +10,4 @@ jobs:
     with:
         SOURCE: CCS
         TARGET: PKU
- 
+        ACTION: SIGN
