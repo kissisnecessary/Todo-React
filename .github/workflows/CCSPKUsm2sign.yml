@@ -6,4 +6,8 @@ on:
     - cron: '0 0 * * 3' # https://crontab.guru/#0_0_*_*_3
 jobs:
   ccsPKUsign:
-    uses: ./.github/workflows/bas
+    uses: ./.github/workflows/basicCI.yml
+    with:
+        SOURCE: CCS
+        TARGET: PKU
+ 
