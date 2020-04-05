@@ -1,1 +1,6 @@
-name: ccstjsig
+name: ccstjsign
+on:
+  pull_request:
+  push:
+  schedule:
+    - 
