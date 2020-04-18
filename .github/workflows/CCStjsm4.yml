@@ -1,0 +1,4 @@
+
+name: ccstjsm4test
+on:
+  pull_request:

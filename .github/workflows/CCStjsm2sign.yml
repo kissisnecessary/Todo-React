@@ -8,4 +8,6 @@ jobs:
   ccstjsign:
     uses: ./.github/workflows/basicCI.yml
     with:
-      SO
+      SOURCE: CCS
+      TARGET: TJ
+      ACTION: SIGN
