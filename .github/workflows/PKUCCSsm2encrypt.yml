@@ -2,4 +2,5 @@ name: PKUccsencrypt
 on:
   pull_request:
   push:
-  s
+  schedule:
+    - cron: '0 0 * * 3' # https://crontab.guru/#0_0_*_*
