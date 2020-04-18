@@ -1,13 +1,14 @@
-name: PKUccsencrypt
+
+name: PKUccssign
 on:
   pull_request:
   push:
   schedule:
     - cron: '0 0 * * 3' # https://crontab.guru/#0_0_*_*_3
 jobs:
-  PKUccsencrypt:
+  PKUccssign:
     uses: ./.github/workflows/basicCI.yml
-    with:
+    with:  
       SOURCE: PKU
       TARGET: CCS
-      ACTION: ENCRYPT
+      ACTION: SIGN
