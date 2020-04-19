@@ -1,3 +1,6 @@
 name: PKUccssm4test
 on:
   pull_request:
+  push:
+  schedule:
+    - cron: '0 0 * * 3' # https://crontab
