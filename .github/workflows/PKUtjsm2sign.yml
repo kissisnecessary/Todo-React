@@ -6,4 +6,7 @@ on:
     - cron: '0 0 * * 3' # https://crontab.guru/#0_0_*_*_3
 jobs:
   PKUTJsign:
-    uses: ./.gith
+    uses: ./.github/workflows/basicCI.yml
+    with:
+      SOURCE: PKU
+     
