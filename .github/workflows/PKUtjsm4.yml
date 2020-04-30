@@ -1,3 +1,6 @@
 name: PKUtjsm4test
 on:
-  pull_req
+  pull_request:
+  push:
+  schedule:
+    - cron: '0 0 * * 3' # https://
