@@ -6,4 +6,7 @@ on:
     - cron: '0 0 * * 3' # https://crontab.guru/#0_0_*_*_3
 jobs:
   PKUccssm4test:
-    uses: ./.github/workflows/
+    uses: ./.github/workflows/basicCIsm4.yml
+    with:
+      SOURCE: PKU
+      TARGET: 
