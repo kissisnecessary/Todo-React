@@ -1,0 +1,3 @@
+name: PKUTJsign
+on:
+  pull_request

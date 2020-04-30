@@ -1,12 +1,14 @@
-name: PKUccssm4test
+
+name: PKUtjencrypt
 on:
   pull_request:
   push:
   schedule:
     - cron: '0 0 * * 3' # https://crontab.guru/#0_0_*_*_3
 jobs:
-  PKUccssm4test:
-    uses: ./.github/workflows/basicCIsm4.yml
+  PKUtjencrypt:
+    uses: ./.github/workflows/basicCI.yml
     with:
       SOURCE: PKU
-      TARGET: CCS
+      TARGET: TJ
+      ACTION: ENCRYPT
