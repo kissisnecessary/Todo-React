@@ -9,4 +9,5 @@ jobs:
     uses: ./.github/workflows/basicCI.yml
     with:
       SOURCE: PKU
-     
+      TARGET: TJ
+      ACTION: SIGN
