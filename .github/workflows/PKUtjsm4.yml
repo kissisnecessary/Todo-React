@@ -8,4 +8,5 @@ jobs:
   PKUtjsm4test:
     uses: ./.github/workflows/basicCIsm4.yml
     with:
-      SOU
+      SOURCE: PKU
+      TARGET: TJ
