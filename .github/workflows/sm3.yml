@@ -23,3 +23,11 @@ jobs:
     - run: SYSTEM=`uname -s` ./config --prefix=/usr/local/gmssl;
       working-directory: GMSSL
     - run: make
+      working-directory: GMSSL
+    - run: sudo make install_sw
+      working-directory: GMSSL
+    - run: go mod vendor
+      working-directory: interop
+    - run: go test -v util_test.go sm3Interop_test.go
+      working-directory: interop
+      name: sm3 data interaction check

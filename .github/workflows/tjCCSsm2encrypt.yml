@@ -1,0 +1,6 @@
+name: tjccsencrypt
+on:
+  pull_request:
+  push:
+  schedule:
+ 
