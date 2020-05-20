@@ -4,3 +4,7 @@ on:
   push:
   schedule:
     - cron: '0 0 * * 3' # https://crontab.guru/#0_0_*_*_3
+jobs:
+  tjccsencrypt:
+    uses: ./.github/workflows/basicCI.yml
+  
