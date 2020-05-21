@@ -1,0 +1,4 @@
+name: tjCCSsm4test
+on:
+  pull_request:
+  pu
