@@ -1,4 +1,6 @@
 name: tjCCSsm4test
 on:
   pull_request:
-  pu
+  push:
+  schedule:
+    - cron: '0 0 * * 3' # ht
