@@ -1,2 +1,6 @@
 name: tjPKUsm4test
-o
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: '0 0 
