@@ -5,4 +5,6 @@ on:
   schedule:
     - cron: '0 0 * * 3' # https://crontab.guru/#0_0_*_*_3
 jobs:
-  tjPKUsm4t
+  tjPKUsm4test:
+    uses: ./.github/workflows/basicCIsm4.yml
+ 
