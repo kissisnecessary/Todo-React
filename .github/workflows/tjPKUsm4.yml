@@ -7,4 +7,6 @@ on:
 jobs:
   tjPKUsm4test:
     uses: ./.github/workflows/basicCIsm4.yml
- 
+    with:
+      SOURCE: TJ
+      TARGET: PKU
