@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actio
+    - uses: actions/setup-go@main
+      with:
+          go-version: 1.
