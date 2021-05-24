@@ -7,4 +7,5 @@
     
     |  lib   | version  |
     |  ----  | ----  |
-    | github.com/Hyperledger-TWGC/ccs-gm 
+    | github.com/Hyperledger-TWGC/ccs-gm  | v1.0.0 |
+    | github.com/Hyperledger-TWGC/pku-gm  | v1.0
