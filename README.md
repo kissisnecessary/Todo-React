@@ -8,4 +8,6 @@
     |  lib   | version  |
     |  ----  | ----  |
     | github.com/Hyperledger-TWGC/ccs-gm  | v1.0.0 |
-    | github.com/Hyperledger-TWGC/pku-gm  | v1.0
+    | github.com/Hyperledger-TWGC/pku-gm  | v1.0.2 |
+    | github.com/Hyperledger-TWGC/tjfoc-gm  | v1.4.0 |
+    | g
