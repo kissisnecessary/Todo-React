@@ -10,4 +10,8 @@
     | github.com/Hyperledger-TWGC/ccs-gm  | v1.0.0 |
     | github.com/Hyperledger-TWGC/pku-gm  | v1.0.2 |
     | github.com/Hyperledger-TWGC/tjfoc-gm  | v1.4.0 |
-    | g
+    | github.com/Hyperledger-TWGC/java-gm  | master |
+  	 
+## SM2 status
+
+| 
