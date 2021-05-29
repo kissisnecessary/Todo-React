@@ -16,4 +16,4 @@
 
 |     |  CCS | TJ | PKU |
 |  ----  | ----  | ----  | ----  |
-| CCS      |  n/A | ![example workflow](https://github.com/Hyper
+| CCS      |  n/A | ![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm2sign.yml/b
