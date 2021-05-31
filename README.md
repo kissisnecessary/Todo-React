@@ -16,4 +16,4 @@
 
 |     |  CCS | TJ | PKU |
 |  ----  | ----  | ----  | ----  |
-| CCS      |  n/A | ![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm2sign.yml/badge.svg)![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm2encrypt.yml/badge.svg)| ![example workflow](https://github.co
+| CCS      |  n/A | ![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm2sign.yml/badge.svg)![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm2encrypt.yml/badge.svg)| ![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CC
