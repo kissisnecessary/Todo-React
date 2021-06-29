@@ -21,4 +21,8 @@
 | PKU      |  ![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/PKUCCSsm2sign.yml/badge.svg)[![PKUccsencrypt](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/PKUCCSsm2encrypt.yml/badge.svg)](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/PKUCCSsm2encrypt.yml)| ![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/PKUtjsm2sign.yml/badge.svg)![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/PKUtjsm2encrypt.yml/badge.svg)| n/A |
 
 ## SM3 status
-![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflo
+![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/sm3.yml/badge.svg)
+
+## java gm status
+
+![example work
