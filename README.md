@@ -25,4 +25,4 @@
 
 ## java gm status
 
-![example work
+![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/a
