@@ -25,4 +25,8 @@
 
 ## java gm status
 
-![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/a
+![example workflow](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/javagm.yml/badge.svg)
+
+## SM4 status
+
+|     
