@@ -31,4 +31,4 @@
 
 |     |  CCS | TJ | PKU |
 |  ----  | ----  | ----  | ----  |
-| CCS      |  n/A |  [![ccstjsm4test](https://github.com/Hyperledger-TWGC/GM-intero
+| CCS      |  n/A |  [![ccstjsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm4.yml/badge.svg)](h
