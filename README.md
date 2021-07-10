@@ -31,4 +31,4 @@
 
 |     |  CCS | TJ | PKU |
 |  ----  | ----  | ----  | ----  |
-| CCS      |  n/A |  [![ccstjsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm4.yml/badge.svg)](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm4.yml) |  [![ccsPKUsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actio
+| CCS      |  n/A |  [![ccstjsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm4.yml/badge.svg)](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm4.yml) |  [![ccsPKUsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCSPKUsm4.yml/badge.svg)](https://github.com/Hy
