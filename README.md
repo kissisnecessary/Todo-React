@@ -33,4 +33,4 @@
 |  ----  | ----  | ----  | ----  |
 | CCS      |  n/A |  [![ccstjsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm4.yml/badge.svg)](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCStjsm4.yml) |  [![ccsPKUsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCSPKUsm4.yml/badge.svg)](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/CCSPKUsm4.yml) |
 | TJ      |   [![tjCCSsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/tjCCSsm4.yml/badge.svg)](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/tjCCSsm4.yml) | n/A |  [![tjPKUsm4test](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/tjPKUsm4.yml/badge.svg)](https://github.com/Hyperledger-TWGC/GM-interoperability/actions/workflows/tjPKUsm4.yml) |
-| PKU      |   [![PKUccss
+| PKU      |   [![PKUccssm4test](https://github.com/Hyperledger-TWGC/GM-int
