@@ -8,4 +8,8 @@ import (
 )
 
 type CCSSM2 struct {
-	PrivateKey *ccs.Pri
+	PrivateKey *ccs.PrivateKey
+	PublicKey  *ccs.PublicKey
+}
+
+func NewCCSSM2() (
