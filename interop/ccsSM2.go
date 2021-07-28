@@ -12,4 +12,5 @@ type CCSSM2 struct {
 	PublicKey  *ccs.PublicKey
 }
 
-func NewCCSSM2() (
+func NewCCSSM2() (*CCSSM2, error) {
+	PrivateKey, err := ccs.GenerateKey(rand.Rea
