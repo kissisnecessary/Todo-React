@@ -20,4 +20,5 @@ func NewCCSSM2() (*CCSSM2, error) {
 	return &CCSSM2{PrivateKey: PrivateKey, PublicKey: &PrivateKey.PublicKey}, nil
 }
 
-func CCSImportKey(privPEM []byte, pubPEM []byte)
+func CCSImportKey(privPEM []byte, pubPEM []byte) (*CCSSM2, error) {
+	PrivateKey, err := ccsutils.PEMtoP
