@@ -26,4 +26,7 @@ func CCSImportKey(privPEM []byte, pubPEM []byte) (*CCSSM2, error) {
 		return nil, err
 	}
 	PublicKey, err := ccsutils.PEMtoPublicKey(pubPEM, nil)
-	if e
+	if err != nil {
+		return nil, err
+	}
+	return &CC
