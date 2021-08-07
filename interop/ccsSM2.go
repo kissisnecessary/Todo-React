@@ -31,3 +31,5 @@ func CCSImportKey(privPEM []byte, pubPEM []byte) (*CCSSM2, error) {
 	}
 	return &CCSSM2{PrivateKey: PrivateKey, PublicKey: PublicKey}, nil
 }
+
+func (instance *CCSSM2) ExportKey() (privPEM []byte, pubPE
