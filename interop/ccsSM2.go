@@ -37,4 +37,8 @@ func (instance *CCSSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 	if err != nil {
 		return
 	}
-	pubPEM, err = ccsutils.PublicKeyToPEM(instance.Pu
+	pubPEM, err = ccsutils.PublicKeyToPEM(instance.PublicKey, nil)
+	return
+}
+
+func (instance *CCSSM2) Encrypt(msg []
