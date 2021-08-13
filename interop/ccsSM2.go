@@ -41,4 +41,5 @@ func (instance *CCSSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 	return
 }
 
-func (instance *CCSSM2) Encrypt(msg []
+func (instance *CCSSM2) Encrypt(msg []byte) ([]byte, error) {
+	encrypted, err := ccs.EncryptAsn1(
