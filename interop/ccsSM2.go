@@ -50,4 +50,5 @@ func (instance *CCSSM2) Encrypt(msg []byte) ([]byte, error) {
 }
 
 func (instance *CCSSM2) Decrypt(encrypted []byte) ([]byte, error) {
-	decrypted, err := 
+	decrypted, err := ccs.DecryptAsn1(instance.PrivateKey, encrypted)
+	if err 
