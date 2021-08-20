@@ -58,4 +58,4 @@ func (instance *CCSSM2) Decrypt(encrypted []byte) ([]byte, error) {
 }
 
 func (instance *CCSSM2) Sign(msg []byte) ([]byte, error) {
-	sign, err
+	sign, err := instance.PrivateKey.Sign(rand.Reader, msg,
