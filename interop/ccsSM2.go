@@ -56,3 +56,6 @@ func (instance *CCSSM2) Decrypt(encrypted []byte) ([]byte, error) {
 	}
 	return decrypted, nil
 }
+
+func (instance *CCSSM2) Sign(msg []byte) ([]byte, error) {
+	sign, err
