@@ -66,4 +66,6 @@ func (instance *CCSSM2) Sign(msg []byte) ([]byte, error) {
 }
 
 func (instance *CCSSM2) Verify(msg []byte, sign []byte) bool {
-	ok := instance.PublicKey.Verify
+	ok := instance.PublicKey.Verify(msg, sign) // 公钥验证
+	return ok
+}
