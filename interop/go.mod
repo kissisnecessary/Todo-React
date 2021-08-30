@@ -10,4 +10,5 @@ require (
 
 require (
 	golang.org/x/crypto v0.1.0 // indirect
-	gol
+	golang.org/x/sys v0.1.0 // indirect
+)
