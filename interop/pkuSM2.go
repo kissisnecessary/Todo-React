@@ -51,3 +51,61 @@ func (instance *PKUSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 func (instance *PKUSM2) Encrypt(msg []byte) ([]byte, error) {
 	sm2ciphertext, err := instance.PublicKey.Encrypt("sm2encrypt-with-sm3", []byte(msg), nil)
 	return sm2ciphertext, err
+}
+func (instance *PKUSM2) Decrypt(encrypted []byte) ([]byte, error) {
+	decrypted, err := instance.PrivateKey.Decrypt("sm2encrypt-with-sm3", encrypted, nil)
+	return decrypted, err
+}
+func (instance *PKUSM2) Sign(msg []byte) ([]byte, error) {
+	sm3ctx, err := pku.NewDigestContext(pku.SM3)
+	if err != nil {
+		return nil, err
+	}
+	sm2zid, err := instance.PublicKey.ComputeSM2IDDigest("1234567812345678")
+	if err != nil {
+		return nil, err
+	}
+	err = sm3ctx.Reset()
+	if err != nil {
+		return nil, err
+	}
+	err = sm3ctx.Update(sm2zid)
+	if err != nil {
+		return nil, err
+	}
+	err = sm3ctx.Update(msg)
+	if err != nil {
+		return nil, err
+	}
+	digest, err := sm3ctx.Final()
+	pkusign, err := instance.PrivateKey.Sign("sm2sign", digest, nil)
+	return pkusign, err
+}
+func (instance *PKUSM2) Verify(msg []byte, sign []byte) bool {
+	sm3ctx, err := pku.NewDigestContext(pku.SM3)
+	if err != nil {
+		return false
+	}
+	sm2zid, err := instance.PublicKey.ComputeSM2IDDigest("1234567812345678")
+	if err != nil {
+		return false
+	}
+	err = sm3ctx.Reset()
+	if err != nil {
+		return false
+	}
+	err = sm3ctx.Update(sm2zid)
+	if err != nil {
+		return false
+	}
+	err = sm3ctx.Update(msg)
+	if err != nil {
+		return false
+	}
+	digest, err := sm3ctx.Final()
+	err = instance.PublicKey.Verify("sm2sign", digest, sign, nil)
+	if err != nil {
+		return false
+	}
+	return true
+}
