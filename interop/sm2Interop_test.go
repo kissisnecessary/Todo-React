@@ -7,4 +7,6 @@ import (
 	"time"
 )
 
-func
+func TestSM2(t *testing.T) {
+	sourceDef := os.Getenv("SOURCE")
+	tar
