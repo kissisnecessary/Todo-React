@@ -9,4 +9,7 @@ import (
 
 func TestSM2(t *testing.T) {
 	sourceDef := os.Getenv("SOURCE")
-	tar
+	targetDef := os.Getenv("TARGET")
+	action := os.Getenv("ACTION")
+
+	base_format := "2
