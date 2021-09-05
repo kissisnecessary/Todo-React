@@ -12,4 +12,6 @@ func TestSM2(t *testing.T) {
 	targetDef := os.Getenv("TARGET")
 	action := os.Getenv("ACTION")
 
-	base_format := "2
+	base_format := "2006-01-02 15:04:05"
+	time := time.Now()
+	str_time :
