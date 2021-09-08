@@ -14,4 +14,6 @@ func TestSM2(t *testing.T) {
 
 	base_format := "2006-01-02 15:04:05"
 	time := time.Now()
-	str_time :
+	str_time := time.Format(base_format)
+	msg := []byte(str_time)
+	// generate key fro
