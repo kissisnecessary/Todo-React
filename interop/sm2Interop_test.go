@@ -16,4 +16,7 @@ func TestSM2(t *testing.T) {
 	time := time.Now()
 	str_time := time.Format(base_format)
 	msg := []byte(str_time)
-	// generate key fro
+	// generate key from source
+	var source, target SM2
+	var err error
+	fmt.Println("source
