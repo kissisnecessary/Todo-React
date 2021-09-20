@@ -19,4 +19,6 @@ func TestSM2(t *testing.T) {
 	// generate key from source
 	var source, target SM2
 	var err error
-	fmt.Println("source
+	fmt.Println("source lib " + sourceDef)
+	if sourceDef == "TJ" {
+		source, err = Ne
