@@ -21,4 +21,8 @@ func TestSM2(t *testing.T) {
 	var err error
 	fmt.Println("source lib " + sourceDef)
 	if sourceDef == "TJ" {
-		source, err = Ne
+		source, err = NewTJSM2()
+		Fatal(err, t)
+	}
+	if sourceDef == "PKU" {
+		source,
