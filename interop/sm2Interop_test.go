@@ -25,4 +25,7 @@ func TestSM2(t *testing.T) {
 		Fatal(err, t)
 	}
 	if sourceDef == "PKU" {
-		source,
+		source, err = NewPKUSM2()
+		Fatal(err, t)
+	}
+	if sourc
