@@ -28,4 +28,6 @@ func TestSM2(t *testing.T) {
 		source, err = NewPKUSM2()
 		Fatal(err, t)
 	}
-	if sourc
+	if sourceDef == "CCS" {
+		source, err = NewCCSSM2()
+		Fatal(
