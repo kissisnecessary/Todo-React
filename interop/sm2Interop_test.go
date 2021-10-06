@@ -33,4 +33,6 @@ func TestSM2(t *testing.T) {
 		Fatal(err, t)
 	}
 	privPEM, pubPem, err := source.ExportKey()
-	F
+	Fatal(err, t)
+	// locd key from target
+	fmt.Println("load key
