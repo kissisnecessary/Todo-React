@@ -30,4 +30,7 @@ func TestSM2(t *testing.T) {
 	}
 	if sourceDef == "CCS" {
 		source, err = NewCCSSM2()
-		Fatal(
+		Fatal(err, t)
+	}
+	privPEM, pubPem, err := source.ExportKey()
+	F
