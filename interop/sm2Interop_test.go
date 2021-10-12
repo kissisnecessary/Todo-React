@@ -40,4 +40,5 @@ func TestSM2(t *testing.T) {
 		target, err = TJImportKey(privPEM, pubPem)
 		Fatal(err, t)
 	}
-	if targetDef == "CCS"
+	if targetDef == "CCS" {
+		target, err = CCSImportKey(priv
