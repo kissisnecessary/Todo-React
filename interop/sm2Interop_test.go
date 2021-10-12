@@ -41,4 +41,7 @@ func TestSM2(t *testing.T) {
 		Fatal(err, t)
 	}
 	if targetDef == "CCS" {
-		target, err = CCSImportKey(priv
+		target, err = CCSImportKey(privPEM, pubPem)
+		Fatal(err, t)
+	}
+	if targetDef == "PKU" 
