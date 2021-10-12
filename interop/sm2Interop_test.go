@@ -35,4 +35,6 @@ func TestSM2(t *testing.T) {
 	privPEM, pubPem, err := source.ExportKey()
 	Fatal(err, t)
 	// locd key from target
-	fmt.Println("load key
+	fmt.Println("load key to target lib " + targetDef)
+	if targetDef == "TJ" {
+		target, err = T
