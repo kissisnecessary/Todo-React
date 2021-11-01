@@ -46,4 +46,9 @@ func TestSM2(t *testing.T) {
 	}
 	if targetDef == "PKU" {
 		target, err = PKUImport(privPEM, pubPem)
-		Fatal(err,
+		Fatal(err, t)
+	}
+
+	if action == "SIGN" {
+		// sign by ccs
+		
