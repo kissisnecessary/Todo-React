@@ -51,4 +51,7 @@ func TestSM2(t *testing.T) {
 
 	if action == "SIGN" {
 		// sign by ccs
-		
+		sign, err := target.Sign(msg)
+		Fatal(err, t)
+		// verify by tj
+		ok := 
