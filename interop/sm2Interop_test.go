@@ -54,4 +54,6 @@ func TestSM2(t *testing.T) {
 		sign, err := target.Sign(msg)
 		Fatal(err, t)
 		// verify by tj
-		ok := 
+		ok := source.Verify(msg, sign) // 公钥验证
+		if !ok {
+			t.Fatal("
