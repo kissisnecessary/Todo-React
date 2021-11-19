@@ -59,4 +59,6 @@ func TestSM2(t *testing.T) {
 			t.Fatal("source lib verify target sign error")
 		}
 	}
-	if ac
+	if action == "ENCRYPT" {
+		// encrypt by source
+		encrypted, er
