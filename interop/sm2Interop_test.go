@@ -56,4 +56,7 @@ func TestSM2(t *testing.T) {
 		// verify by tj
 		ok := source.Verify(msg, sign) // 公钥验证
 		if !ok {
-			t.Fatal("
+			t.Fatal("source lib verify target sign error")
+		}
+	}
+	if ac
