@@ -61,4 +61,6 @@ func TestSM2(t *testing.T) {
 	}
 	if action == "ENCRYPT" {
 		// encrypt by source
-		encrypted, er
+		encrypted, err := source.Encrypt(msg)
+		Fatal(err, t)
+		// decrypt by targe
