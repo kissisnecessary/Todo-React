@@ -65,4 +65,8 @@ func TestSM2(t *testing.T) {
 		Fatal(err, t)
 		// decrypt by target
 		decrypted, err := target.Decrypt(encrypted)
-		if string(msg) != string(decr
+		if string(msg) != string(decrypted) {
+			t.Fatal("soruce encrypt target decrypt error")
+		}
+	}
+}
