@@ -63,4 +63,6 @@ func TestSM2(t *testing.T) {
 		// encrypt by source
 		encrypted, err := source.Encrypt(msg)
 		Fatal(err, t)
-		// decrypt by targe
+		// decrypt by target
+		decrypted, err := target.Decrypt(encrypted)
+		if string(msg) != string(decr
