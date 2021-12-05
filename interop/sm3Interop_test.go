@@ -12,4 +12,6 @@ import (
 var base_format = "2006-01-02 15:04:05"
 
 func TestSM3(t *testing.T) {
-	// generate a rando
+	// generate a random string as data
+	time := time.Now()
+	str_time := time.Format(bas
