@@ -19,4 +19,7 @@ func TestSM3(t *testing.T) {
 	// generate key from tj
 	tj_digest := tj.Sm3Sum([]byte(str_time))
 	ccs_digest := ccs.SumSM3(msg)
-	sm3hash := pku.Ne
+	sm3hash := pku.New()
+	sm3hash.Write(msg)
+	pku_digest := sm3hash.Sum(nil)
+	
