@@ -16,4 +16,5 @@ func TestSM3(t *testing.T) {
 	time := time.Now()
 	str_time := time.Format(base_format)
 	msg := []byte(str_time)
-	// gener
+	// generate key from tj
+	tj_digest := tj.Sm3Sum([]byte(st
