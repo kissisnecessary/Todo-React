@@ -23,4 +23,5 @@ func TestSM3(t *testing.T) {
 	sm3hash.Write(msg)
 	pku_digest := sm3hash.Sum(nil)
 	if string(tj_digest) != string(ccs_digest) {
-		t.Error("
+		t.Error("error, tj digest doesn't equal with ccs digest")
+	}
