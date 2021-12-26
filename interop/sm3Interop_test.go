@@ -26,4 +26,6 @@ func TestSM3(t *testing.T) {
 		t.Error("error, tj digest doesn't equal with ccs digest")
 	}
 	if string(ccs_digest) != string(pku_digest) {
-		t.Error("er
+		t.Error("error, ccs digest doesn't equal with pku digest")
+	}
+}
