@@ -59,3 +59,75 @@ func TestSM4(t *testing.T) {
 			if err != nil {
 				t.Errorf("sm4 enc error:%s", err)
 				return
+			}
+		}
+	case "CCS":
+		{
+			ecbMsg, err = ccs.Sm4Ecb(key, msg, ccs.ENC)
+			if err != nil {
+				t.Errorf("sm4 enc error:%s", err)
+				return
+			}
+			cbcMsg, err = ccs.Sm4Cbc(key, msg, ccs.ENC)
+			if err != nil {
+				t.Errorf("sm4 enc error:%s", err)
+				return
+			}
+		}
+	case "PKU":
+		{
+			//ecbMsg
+			inData := pkcs7Padding(msg)
+			ecbMsg = make([]byte, len(inData))
+			//loop for each 16 bytes of msg
+			for i := 0; i < len(inData)/16; i++ {
+				TempMsg, err := pku.CipherECBenc(inData[i*16:(i+1)*16], key)
+				if err != nil {
+					t.Errorf("sm4 enc error:%s", err)
+					return
+				}
+				//append into ecbMsg
+				copy(ecbMsg[i*16:i*16+16], TempMsg)
+			}
+			// cbcMsg
+			encrypt, err := pku.NewCipherContext(pku.SMS4, key, iv, true)
+			if err != nil {
+				t.Errorf("sm4 enc error:%s", err)
+				return
+			}
+			ciphertext1, err := encrypt.Update(msg)
+			if err != nil {
+				t.Errorf("sm4 enc error:%s", err)
+				return
+			}
+			ciphertext2, err := encrypt.Final()
+			if err != nil {
+				t.Errorf("sm4 enc error:%s", err)
+				return
+			}
+			cbcMsg = make([]byte, 0, len(ciphertext1)+len(ciphertext2))
+			cbcMsg = append(cbcMsg, ciphertext1...)
+			cbcMsg = append(cbcMsg, ciphertext2...)
+		}
+	default:
+		t.Errorf("unsupported")
+	}
+	// lib b decrypt
+	switch targetDef {
+	case "TJ":
+		{
+			ecbDec, err = tj.Sm4Ecb(key, ecbMsg, false)
+			if err != nil {
+				t.Errorf("sm4 dec error:%s", err)
+				return
+			}
+			cbcDec, err = tj.Sm4Cbc(key, cbcMsg, false)
+			if err != nil {
+				t.Errorf("sm4 enc error:%s", err)
+				return
+			}
+		}
+	case "CCS":
+		{
+			ecbDec, err = ccs.Sm4Ecb(key, ecbMsg, ccs.DEC)
+			if err != nil {
