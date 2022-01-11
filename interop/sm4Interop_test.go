@@ -192,3 +192,20 @@ func pkcs7Padding(src []byte) []byte {
 	padtext := bytes.Repeat([]byte{byte(padding)}, padding)
 	return append(src, padtext...)
 }
+
+func pkcs7UnPadding(src []byte) ([]byte, error) {
+	length := len(src)
+	unpadding := int(src[length-1])
+	if unpadding > 16 || unpadding == 0 {
+		return nil, errors.New("Invalid pkcs7 padding (unpadding > BlockSize || unpadding == 0)")
+	}
+
+	pad := src[len(src)-unpadding:]
+	for i := 0; i < unpadding; i++ {
+		if pad[i] != byte(unpadding) {
+			return nil, errors.New("Invalid pkcs7 padding (pad[i] != unpadding)")
+		}
+	}
+
+	return src[:(length - unpadding)], nil
+}
