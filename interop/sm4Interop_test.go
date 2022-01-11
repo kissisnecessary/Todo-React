@@ -131,3 +131,64 @@ func TestSM4(t *testing.T) {
 		{
 			ecbDec, err = ccs.Sm4Ecb(key, ecbMsg, ccs.DEC)
 			if err != nil {
+				t.Errorf("sm4 dec error:%s", err)
+				return
+			}
+			cbcDec, err = ccs.Sm4Cbc(key, cbcMsg, ccs.DEC)
+			if err != nil {
+				t.Errorf("sm4 dec error:%s", err)
+				return
+			}
+		}
+	case "PKU":
+		{
+			ecbDec = make([]byte, len(ecbMsg))
+			for i := 0; i < len(ecbMsg)/16; i++ {
+				in_tmp := ecbMsg[i*16 : i*16+16]
+				out_tmp := make([]byte, 16)
+				out_tmp, err = pku.CipherECBdec(in_tmp, key)
+				if err != nil {
+					t.Errorf("sm4 dec error:%s", err)
+					return
+				}
+				copy(ecbDec[i*16:(i+1)*16], out_tmp)
+			}
+			ecbDec, _ = pkcs7UnPadding(ecbDec)
+			decryptor, err := pku.NewCipherContext(pku.SMS4, key, iv, false)
+			if err != nil {
+				t.Errorf("sm4 dec error:%s", err)
+				return
+			}
+			plaintext1, err := decryptor.Update(cbcMsg)
+			if err != nil {
+				t.Errorf("sm4 dec error:%s", err)
+				return
+			}
+			plaintext2, err := decryptor.Final()
+			if err != nil {
+				t.Errorf("sm4 dec error:%s", err)
+				return
+			}
+			cbcDec = make([]byte, 0, len(plaintext1)+len(plaintext2))
+			cbcDec = append(cbcDec, plaintext1...)
+			cbcDec = append(cbcDec, plaintext2...)
+		}
+	default:
+		t.Errorf("unsupported")
+	}
+	fmt.Printf("ecbDec = %x\n", ecbDec)
+	fmt.Println(ecbDec)
+	// compare
+	if string(msg) != string(ecbDec) {
+		t.Errorf("sm4 enc and dec failed for ecb mode")
+	}
+	if string(msg) != string(cbcDec) {
+		t.Errorf("sm4 enc and dec failed for cbc mode")
+	}
+}
+
+func pkcs7Padding(src []byte) []byte {
+	padding := 16 - len(src)%16
+	padtext := bytes.Repeat([]byte{byte(padding)}, padding)
+	return append(src, padtext...)
+}
