@@ -8,4 +8,8 @@ import (
 )
 
 type TJSM2 struct {
-	PrivateKey *tj.Pr
+	PrivateKey *tj.PrivateKey
+	PublicKey  *tj.PublicKey
+}
+
+func NewTJSM2() 
