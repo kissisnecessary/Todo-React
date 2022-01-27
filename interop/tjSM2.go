@@ -12,4 +12,5 @@ type TJSM2 struct {
 	PublicKey  *tj.PublicKey
 }
 
-func NewTJSM2() 
+func NewTJSM2() (*TJSM2, error) {
+	PrivateKey, err := tj.G
