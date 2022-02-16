@@ -17,4 +17,7 @@ func NewTJSM2() (*TJSM2, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &TJSM2{PrivateKey: PrivateKey, PublicKey: &Priva
+	return &TJSM2{PrivateKey: PrivateKey, PublicKey: &PrivateKey.PublicKey}, nil
+}
+
+func TJImportKey(privPEM []byte, p
