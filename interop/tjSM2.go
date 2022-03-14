@@ -27,4 +27,6 @@ func TJImportKey(privPEM []byte, pubPEM []byte) (*TJSM2, error) {
 	}
 	PublicKey, err := tjx509.ReadPublicKeyFromPem(pubPEM)
 	if err != nil {
-	
+		return nil, err
+	}
+	return &TJSM2{PrivateKey: PrivateKey, 
