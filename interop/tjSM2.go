@@ -29,4 +29,7 @@ func TJImportKey(privPEM []byte, pubPEM []byte) (*TJSM2, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &TJSM2{PrivateKey: PrivateKey, 
+	return &TJSM2{PrivateKey: PrivateKey, PublicKey: PublicKey}, nil
+}
+
+func (instance *T
