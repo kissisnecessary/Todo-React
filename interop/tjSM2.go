@@ -32,4 +32,4 @@ func TJImportKey(privPEM []byte, pubPEM []byte) (*TJSM2, error) {
 	return &TJSM2{PrivateKey: PrivateKey, PublicKey: PublicKey}, nil
 }
 
-func (instance *T
+func (instance *TJSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) 
