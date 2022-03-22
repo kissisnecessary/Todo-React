@@ -41,4 +41,5 @@ func (instance *TJSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 	return
 }
 
-func (in
+func (instance *TJSM2) Encrypt(msg []byte) ([]byte, error) {
+	encry
