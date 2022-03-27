@@ -50,4 +50,4 @@ func (instance *TJSM2) Encrypt(msg []byte) ([]byte, error) {
 }
 
 func (instance *TJSM2) Decrypt(encrypted []byte) ([]byte, error) {
-	decryp
+	decrypted, err := instance.PrivateKey.DecryptAsn1(encrypted)
