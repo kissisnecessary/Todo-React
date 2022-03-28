@@ -58,4 +58,4 @@ func (instance *TJSM2) Decrypt(encrypted []byte) ([]byte, error) {
 }
 
 func (instance *TJSM2) Sign(msg []byte) ([]byte, error) {
-	si
+	sign, err := instance.PrivateKey.Sign(rand.Reader, msg, ni
