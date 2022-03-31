@@ -2,4 +2,10 @@ package interop
 
 import (
 	"bytes"
-	"crypt
+	"crypto/cipher"
+	"encoding/hex"
+	"fmt"
+	"log"
+	"testing"
+
+	"github.com/Hyperle
