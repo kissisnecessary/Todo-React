@@ -8,4 +8,8 @@ import (
 	"log"
 	"testing"
 
-	"github.com/Hyperle
+	"github.com/Hyperledger-TWGC/tjfoc-gm/sm4"
+)
+
+/**
+1. 执行Hyperledger-TWGC/java-gm
