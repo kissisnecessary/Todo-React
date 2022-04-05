@@ -18,4 +18,5 @@ import (
 */
 func TestSM4InteractionWithJava(t *testing.T) {
 	// 128比特密钥
-	key :
+	key := []byte("1234567890abcdef")
+	fmt.Println("key = " + string(k
