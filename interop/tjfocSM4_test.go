@@ -22,4 +22,5 @@ func TestSM4InteractionWithJava(t *testing.T) {
 	fmt.Println("key = " + string(key))
 	// 128比特iv
 	//iv := make([]byte, sm4.BlockSize)
-	i
+	iv := []byte("ilovegolangjava.")
+	fmt.Println("iv = " + string(iv))
