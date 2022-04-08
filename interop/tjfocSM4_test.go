@@ -19,4 +19,7 @@ import (
 func TestSM4InteractionWithJava(t *testing.T) {
 	// 128比特密钥
 	key := []byte("1234567890abcdef")
-	fmt.Println("key = " + string(k
+	fmt.Println("key = " + string(key))
+	// 128比特iv
+	//iv := make([]byte, sm4.BlockSize)
+	i
