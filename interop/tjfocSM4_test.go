@@ -24,3 +24,6 @@ func TestSM4InteractionWithJava(t *testing.T) {
 	//iv := make([]byte, sm4.BlockSize)
 	iv := []byte("ilovegolangjava.")
 	fmt.Println("iv = " + string(iv))
+
+	// 加密明文以供Java sm4解密验证
+	data := []byte("I am encrypted by golang SM4.")
