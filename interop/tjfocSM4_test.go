@@ -28,4 +28,7 @@ func TestSM4InteractionWithJava(t *testing.T) {
 	// 加密明文以供Java sm4解密验证
 	data := []byte("I am encrypted by golang SM4.")
 	ciphertxt, err := sm4Encrypt(key, iv, data)
-	if 
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("加密结果: %x
