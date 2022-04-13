@@ -31,4 +31,7 @@ func TestSM4InteractionWithJava(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("加密结果: %x
+	fmt.Printf("加密结果: %x\n", ciphertxt)
+
+	// 解密Java sm4加密的密文
+	ciphertxt, err1 := he
