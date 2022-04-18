@@ -34,4 +34,8 @@ func TestSM4InteractionWithJava(t *testing.T) {
 	fmt.Printf("加密结果: %x\n", ciphertxt)
 
 	// 解密Java sm4加密的密文
-	ciphertxt, err1 := hex.DecodeString("8781d981f7ffd6c1a780f8b213f596aa6c7e99b94e8b6e0b9147a97a
+	ciphertxt, err1 := hex.DecodeString("8781d981f7ffd6c1a780f8b213f596aa6c7e99b94e8b6e0b9147a97a47b08bc5")
+	if err1 != nil {
+		log.Fatal(err1)
+	}
+	plaintxt
