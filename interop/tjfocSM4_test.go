@@ -39,4 +39,7 @@ func TestSM4InteractionWithJava(t *testing.T) {
 		log.Fatal(err1)
 	}
 	plaintxt, err1 := sm4Decrypt(key, iv, ciphertxt)
-	fmt.Printf("解密结果: %s\n
+	fmt.Printf("解密结果: %s\n", plaintxt)
+}
+
+func sm4Encrypt(key, iv, plainTex
