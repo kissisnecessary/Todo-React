@@ -42,4 +42,5 @@ func TestSM4InteractionWithJava(t *testing.T) {
 	fmt.Printf("解密结果: %s\n", plaintxt)
 }
 
-func sm4Encrypt(key, iv, plainTex
+func sm4Encrypt(key, iv, plainText []byte) ([]byte, error) {
+	block, err := sm4.NewCipher(ke
