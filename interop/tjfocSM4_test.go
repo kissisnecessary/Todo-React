@@ -47,4 +47,5 @@ func sm4Encrypt(key, iv, plainText []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	blockSize := block.
+	blockSize := block.BlockSize()
+	origData := pkcs7PaddingTJ(plainText,
