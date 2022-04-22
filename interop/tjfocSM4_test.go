@@ -43,4 +43,8 @@ func TestSM4InteractionWithJava(t *testing.T) {
 }
 
 func sm4Encrypt(key, iv, plainText []byte) ([]byte, error) {
-	block, err := sm4.NewCipher(ke
+	block, err := sm4.NewCipher(key)
+	if err != nil {
+		return nil, err
+	}
+	blockSize := block.
