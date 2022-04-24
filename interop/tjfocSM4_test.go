@@ -48,4 +48,5 @@ func sm4Encrypt(key, iv, plainText []byte) ([]byte, error) {
 		return nil, err
 	}
 	blockSize := block.BlockSize()
-	origData := pkcs7PaddingTJ(plainText,
+	origData := pkcs7PaddingTJ(plainText, blockSize)
+	blockMode := cipher.NewCBCEncrypter(
