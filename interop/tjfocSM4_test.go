@@ -55,4 +55,5 @@ func sm4Encrypt(key, iv, plainText []byte) ([]byte, error) {
 	return cryted, nil
 }
 
-func sm4
+func sm4Decrypt(key, iv, cipherText []byte) ([]byte, error) {
+	block, err 
