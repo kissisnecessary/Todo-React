@@ -56,4 +56,8 @@ func sm4Encrypt(key, iv, plainText []byte) ([]byte, error) {
 }
 
 func sm4Decrypt(key, iv, cipherText []byte) ([]byte, error) {
-	block, err 
+	block, err := sm4.NewCipher(key)
+	if err != nil {
+		return nil, err
+	}
+	b
