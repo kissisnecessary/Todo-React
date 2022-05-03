@@ -62,4 +62,5 @@ func sm4Decrypt(key, iv, cipherText []byte) ([]byte, error) {
 	}
 	blockMode := cipher.NewCBCDecrypter(block, iv)
 	origData := make([]byte, len(cipherText))
-	blockMode.CryptB
+	blockMode.CryptBlocks(origData, cipherText)
+	origData = pkcs7UnPaddingT
