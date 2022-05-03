@@ -61,4 +61,5 @@ func sm4Decrypt(key, iv, cipherText []byte) ([]byte, error) {
 		return nil, err
 	}
 	blockMode := cipher.NewCBCDecrypter(block, iv)
-	origData := make
+	origData := make([]byte, len(cipherText))
+	blockMode.CryptB
