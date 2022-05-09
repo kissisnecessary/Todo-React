@@ -74,4 +74,6 @@ func pkcs7PaddingTJ(src []byte, blockSize int) []byte {
 	return append(src, padtext...)
 }
 
-// pkc
+// pkcs5填充
+func pkcs5Padding(src []byte, blockSize int) []byte {
+	
