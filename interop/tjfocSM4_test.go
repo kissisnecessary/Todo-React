@@ -79,4 +79,9 @@ func pkcs5Padding(src []byte, blockSize int) []byte {
 	return pkcs7PaddingTJ(src, 8)
 }
 
-func pkcs7UnPaddingTJ(src
+func pkcs7UnPaddingTJ(src []byte) []byte {
+	length := len(src)
+	if length == 0 {
+		return src
+	}
+	un
