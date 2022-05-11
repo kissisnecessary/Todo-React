@@ -84,4 +84,6 @@ func pkcs7UnPaddingTJ(src []byte) []byte {
 	if length == 0 {
 		return src
 	}
-	un
+	unpadding := int(src[length-1])
+	return src[:(length - unpadding)]
+}
