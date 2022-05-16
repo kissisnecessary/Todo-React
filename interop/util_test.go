@@ -4,4 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"testin
+	"testing"
+)
+
+func Fatal(err error, t *testing.T) {
+	if err != nil {
