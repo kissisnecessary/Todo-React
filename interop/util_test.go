@@ -9,3 +9,5 @@ import (
 
 func Fatal(err error, t *testing.T) {
 	if err != nil {
+		fmt.Println("detail error msg")
+		fmt.Println(err)
