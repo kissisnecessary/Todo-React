@@ -11,3 +11,7 @@ func Fatal(err error, t *testing.T) {
 	if err != nil {
 		fmt.Println("detail error msg")
 		fmt.Println(err)
+		t.Fatal(err)
+	}
+}
+func ReadFile(filename string, t *testing.T)
