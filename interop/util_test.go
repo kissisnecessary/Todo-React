@@ -14,4 +14,5 @@ func Fatal(err error, t *testing.T) {
 		t.Fatal(err)
 	}
 }
-func ReadFile(filename string, t *testing.T)
+func ReadFile(filename string, t *testing.T) []byte {
+	content, err := ioutil.ReadFile(filename)
