@@ -16,3 +16,5 @@ func Fatal(err error, t *testing.T) {
 }
 func ReadFile(filename string, t *testing.T) []byte {
 	content, err := ioutil.ReadFile(filename)
+	fmt.Println(filename)
+	fmt.Println("File content
