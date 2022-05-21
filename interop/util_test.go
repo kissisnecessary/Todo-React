@@ -20,4 +20,6 @@ func ReadFile(filename string, t *testing.T) []byte {
 	fmt.Println("File content")
 	fmt.Println(string(content))
 	Fatal(err, t)
-	return con
+	return content
+}
+func WriteFile(content []byte, filename string,
