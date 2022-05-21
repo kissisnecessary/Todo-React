@@ -22,4 +22,6 @@ func ReadFile(filename string, t *testing.T) []byte {
 	Fatal(err, t)
 	return content
 }
-func WriteFile(content []byte, filename string,
+func WriteFile(content []byte, filename string, t *testing.T) {
+	file, err := os.Create(filename)
+	Fatal(er
