@@ -24,4 +24,7 @@ func ReadFile(filename string, t *testing.T) []byte {
 }
 func WriteFile(content []byte, filename string, t *testing.T) {
 	file, err := os.Create(filename)
-	Fatal(er
+	Fatal(err, t)
+	defer func() {
+		err = file.Close()
+		Fatal(err, 
