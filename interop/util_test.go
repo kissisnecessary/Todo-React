@@ -27,4 +27,8 @@ func WriteFile(content []byte, filename string, t *testing.T) {
 	Fatal(err, t)
 	defer func() {
 		err = file.Close()
-		Fatal(err, 
+		Fatal(err, t)
+	}()
+	_, err = file.Write(content)
+	Fatal(err, t)
+}
