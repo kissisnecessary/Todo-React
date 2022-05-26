@@ -10,4 +10,8 @@ import (
 // SM2PrivateKey
 type SM2PrivateKey struct {
 	*PrivateKey
-	Pa
+	Password string
+	skiHash  Hash
+}
+
+func (p *SM2PrivateKey) Bytes
