@@ -14,4 +14,5 @@ type SM2PrivateKey struct {
 	skiHash  Hash
 }
 
-func (p *SM2PrivateKey) Bytes
+func (p *SM2PrivateKey) Bytes() ([]byte, error) {
+	pem, err := p.GetPEM(SMS4,
