@@ -18,4 +18,7 @@ func (p *SM2PrivateKey) Bytes() ([]byte, error) {
 	pem, err := p.GetPEM(SMS4, p.Password)
 	return []byte(pem), err
 }
-func (p *SM2PrivateKey) Symm
+func (p *SM2PrivateKey) Symmetric() bool {
+	return false
+}
+func (p *SM2PrivateKey) Private() bo
