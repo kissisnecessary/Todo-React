@@ -15,4 +15,7 @@ type SM2PrivateKey struct {
 }
 
 func (p *SM2PrivateKey) Bytes() ([]byte, error) {
-	pem, err := p.GetPEM(SMS4,
+	pem, err := p.GetPEM(SMS4, p.Password)
+	return []byte(pem), err
+}
+func (p *SM2PrivateKey) Symm
