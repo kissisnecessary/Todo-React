@@ -21,4 +21,8 @@ func (p *SM2PrivateKey) Bytes() ([]byte, error) {
 func (p *SM2PrivateKey) Symmetric() bool {
 	return false
 }
-func (p *SM2PrivateKey) Private() bo
+func (p *SM2PrivateKey) Private() bool {
+	return true
+}
+
+func (p *SM2PrivateKey) Publ
