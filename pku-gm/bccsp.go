@@ -25,4 +25,6 @@ func (p *SM2PrivateKey) Private() bool {
 	return true
 }
 
-func (p *SM2PrivateKey) Publ
+func (p *SM2PrivateKey) PublicKey() (Key, error) {
+	publicKey, err := p.GetPublicKey()
+	if err
