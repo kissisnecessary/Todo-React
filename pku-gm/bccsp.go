@@ -27,4 +27,8 @@ func (p *SM2PrivateKey) Private() bool {
 
 func (p *SM2PrivateKey) PublicKey() (Key, error) {
 	publicKey, err := p.GetPublicKey()
-	if err
+	if err != nil {
+		return nil, err
+	}
+
+	return &SM2PublicKey{Key: publicKey},
