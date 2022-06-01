@@ -31,4 +31,7 @@ func (p *SM2PrivateKey) PublicKey() (Key, error) {
 		return nil, err
 	}
 
-	return &SM2PublicKey{Key: publicKey},
+	return &SM2PublicKey{Key: publicKey}, nil
+}
+func (p *SM2PrivateKey) SKI() []byte {
+	text, err := p.Ge
