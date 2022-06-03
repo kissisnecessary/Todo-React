@@ -34,4 +34,7 @@ func (p *SM2PrivateKey) PublicKey() (Key, error) {
 	return &SM2PublicKey{Key: publicKey}, nil
 }
 func (p *SM2PrivateKey) SKI() []byte {
-	text, err := p.Ge
+	text, err := p.GetText()
+	PanicError(err)
+	p.skiHash.Reset()
+	p.skiHash.Write
