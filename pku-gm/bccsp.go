@@ -37,4 +37,6 @@ func (p *SM2PrivateKey) SKI() []byte {
 	text, err := p.GetText()
 	PanicError(err)
 	p.skiHash.Reset()
-	p.skiHash.Write
+	p.skiHash.Write([]byte(text))
+	sum := p.skiHash.Sum(nil)
+	p.ski
