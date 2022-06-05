@@ -39,4 +39,9 @@ func (p *SM2PrivateKey) SKI() []byte {
 	p.skiHash.Reset()
 	p.skiHash.Write([]byte(text))
 	sum := p.skiHash.Sum(nil)
-	p.ski
+	p.skiHash.Reset()
+	return sum
+}
+
+// SM2PublicKey
+type SM2Public
