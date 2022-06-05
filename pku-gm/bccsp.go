@@ -44,4 +44,9 @@ func (p *SM2PrivateKey) SKI() []byte {
 }
 
 // SM2PublicKey
-type SM2Public
+type SM2PublicKey struct {
+	Key     *PublicKey
+	skiHash Hash
+}
+
+func (p *
