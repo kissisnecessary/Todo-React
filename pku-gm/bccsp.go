@@ -49,4 +49,6 @@ type SM2PublicKey struct {
 	skiHash Hash
 }
 
-func (p *
+func (p *SM2PublicKey) Bytes() ([]byte, error) {
+	pem, err := p.Key.GetPEM()
+	r
