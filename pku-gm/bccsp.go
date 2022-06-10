@@ -51,4 +51,6 @@ type SM2PublicKey struct {
 
 func (p *SM2PublicKey) Bytes() ([]byte, error) {
 	pem, err := p.Key.GetPEM()
-	r
+	return []byte(pem), err
+}
+func (p *SM2PublicKey) S
