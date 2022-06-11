@@ -56,3 +56,7 @@ func (p *SM2PublicKey) Bytes() ([]byte, error) {
 func (p *SM2PublicKey) SKI() []byte {
 
 	text, err := p.Key.GetText()
+	PanicError(err)
+	p.skiHash.Reset()
+	p.skiHash.Write([]byte(text))
+	
