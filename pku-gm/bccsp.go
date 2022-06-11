@@ -53,4 +53,6 @@ func (p *SM2PublicKey) Bytes() ([]byte, error) {
 	pem, err := p.Key.GetPEM()
 	return []byte(pem), err
 }
-func (p *SM2PublicKey) S
+func (p *SM2PublicKey) SKI() []byte {
+
+	text, err := p.Key.GetText()
