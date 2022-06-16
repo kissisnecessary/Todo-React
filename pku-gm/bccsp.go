@@ -59,4 +59,9 @@ func (p *SM2PublicKey) SKI() []byte {
 	PanicError(err)
 	p.skiHash.Reset()
 	p.skiHash.Write([]byte(text))
-	
+	sum := p.skiHash.Sum(nil)
+	p.skiHash.Reset()
+	return sum
+}
+
+func (p *
