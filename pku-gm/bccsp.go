@@ -70,4 +70,5 @@ func (p *SM2PublicKey) Symmetric() bool {
 func (p *SM2PublicKey) Private() bool {
 	return false
 }
-func (p *SM2PublicKey
+func (p *SM2PublicKey) PublicKey() (Key, error) {
+	return p, n
