@@ -67,4 +67,7 @@ func (p *SM2PublicKey) SKI() []byte {
 func (p *SM2PublicKey) Symmetric() bool {
 	return false
 }
-func
+func (p *SM2PublicKey) Private() bool {
+	return false
+}
+func (p *SM2PublicKey
