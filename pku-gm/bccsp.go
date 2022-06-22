@@ -71,4 +71,10 @@ func (p *SM2PublicKey) Private() bool {
 	return false
 }
 func (p *SM2PublicKey) PublicKey() (Key, error) {
-	return p, n
+	return p, nil
+}
+
+// Software-based GM Suite
+type GMSWSuite struct {
+	KeyStore
+}
