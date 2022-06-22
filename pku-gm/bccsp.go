@@ -78,3 +78,6 @@ func (p *SM2PublicKey) PublicKey() (Key, error) {
 type GMSWSuite struct {
 	KeyStore
 }
+
+// KeyGen generates a Key using opts. FIXME logic correct?
+f
