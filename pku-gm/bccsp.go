@@ -80,4 +80,4 @@ type GMSWSuite struct {
 }
 
 // KeyGen generates a Key using opts. FIXME logic correct?
-f
+func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, er
