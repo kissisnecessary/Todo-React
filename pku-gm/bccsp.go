@@ -80,4 +80,7 @@ type GMSWSuite struct {
 }
 
 // KeyGen generates a Key using opts. FIXME logic correct?
-func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, er
+func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
+	var algorithm = opts.Algorithm()
+
+	// fall to default
