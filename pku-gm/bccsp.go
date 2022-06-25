@@ -84,3 +84,7 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 	var algorithm = opts.Algorithm()
 
 	// fall to default
+	if algorithm == "" {
+		algorithm = "sm2p256v1"
+	}
+	sm2ke
