@@ -87,4 +87,5 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 	if algorithm == "" {
 		algorithm = "sm2p256v1"
 	}
-	sm2ke
+	sm2keygenargs := [][2]string{
+		{"ec_paramgen_curve", algorithm},
