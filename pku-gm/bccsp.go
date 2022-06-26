@@ -89,3 +89,6 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 	}
 	sm2keygenargs := [][2]string{
 		{"ec_paramgen_curve", algorithm},
+		{"ec_param_enc", "named_curve"},
+	}
+	// TODO factory to support 
