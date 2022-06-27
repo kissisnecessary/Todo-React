@@ -91,4 +91,5 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 		{"ec_paramgen_curve", algorithm},
 		{"ec_param_enc", "named_curve"},
 	}
-	// TODO factory to support 
+	// TODO factory to support multiple Key type
+	sm2sk, err := GeneratePrivateKey("EC", sm2
