@@ -92,4 +92,6 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 		{"ec_param_enc", "named_curve"},
 	}
 	// TODO factory to support multiple Key type
-	sm2sk, err := GeneratePrivateKey("EC", sm2
+	sm2sk, err := GeneratePrivateKey("EC", sm2keygenargs, nil)
+	if !opts.Ephemeral() {
+		// Store the Key
