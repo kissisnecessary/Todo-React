@@ -95,3 +95,8 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 	sm2sk, err := GeneratePrivateKey("EC", sm2keygenargs, nil)
 	if !opts.Ephemeral() {
 		// Store the Key
+		err = s.StoreKey(k)
+		if err != nil {
+			return nil, err
+		}
+	}
