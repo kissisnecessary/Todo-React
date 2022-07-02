@@ -100,3 +100,5 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 			return nil, err
 		}
 	}
+	sm3 := New()
+	return &SM2PrivateKey{PrivateKey: sm2sk, skiHash
