@@ -101,4 +101,8 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 		}
 	}
 	sm3 := New()
-	return &SM2PrivateKey{PrivateKey: sm2sk, skiHash
+	return &SM2PrivateKey{PrivateKey: sm2sk, skiHash: sm3}, nil
+}
+
+// KeyDeriv derives a Key from k using opts.
+// The opt
