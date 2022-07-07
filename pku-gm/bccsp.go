@@ -106,4 +106,4 @@ func (s *GMSWSuite) KeyGen(opts KeyGenOpts) (k Key, err error) {
 
 // KeyDeriv derives a Key from k using opts.
 // The opts argument should be appropriate for the primitive used.
-func (s *GM
+func (s *GMSWSuite) KeyDeriv(k Key, opts KeyDerivOpts) (dk Key, err error
