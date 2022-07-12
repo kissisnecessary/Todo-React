@@ -110,4 +110,4 @@ func (s *GMSWSuite) KeyDeriv(k Key, opts KeyDerivOpts) (dk Key, err error) {
 	panic("To be Implement") // TODO
 }
 
-// Ke
+// KeyImport imports a Key from its raw representation using opt
