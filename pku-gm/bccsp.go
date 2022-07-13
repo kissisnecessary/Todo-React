@@ -111,4 +111,5 @@ func (s *GMSWSuite) KeyDeriv(k Key, opts KeyDerivOpts) (dk Key, err error) {
 }
 
 // KeyImport imports a Key from its raw representation using opts.
-// The opts argument should be appropriate for the primitive used
+// The opts argument should be appropriate for the primitive used.
+func (s *GMSWSuite) KeyImport(raw interface{}, opts Key
