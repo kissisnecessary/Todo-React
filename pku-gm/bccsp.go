@@ -122,4 +122,8 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 	if strings.Contains(strings.ToLower(algo), "pub") {
 		pubkey, err := NewPublicKeyFromPEM(pem)
 		if err != nil {
-			return ni
+			return nil, err
+		}
+		k = &SM2PublicKey{
+			Key: pubkey,
+			skiHash: s
