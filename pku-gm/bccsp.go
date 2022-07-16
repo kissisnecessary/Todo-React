@@ -120,3 +120,6 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 	var sm3 = New()
 	// TODO do not use switch
 	if strings.Contains(strings.ToLower(algo), "pub") {
+		pubkey, err := NewPublicKeyFromPEM(pem)
+		if err != nil {
+			return ni
