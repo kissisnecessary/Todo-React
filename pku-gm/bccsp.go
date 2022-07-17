@@ -126,4 +126,7 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 		}
 		k = &SM2PublicKey{
 			Key: pubkey,
-			skiHash: s
+			skiHash: sm3,
+		}
+	} else {
+		privKey, err := NewPrivateKeyFro
