@@ -129,4 +129,6 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 			skiHash: sm3,
 		}
 	} else {
-		privKey, err := NewPrivateKeyFro
+		privKey, err := NewPrivateKeyFromPEM(pem, "") // TODO password support
+		if err != nil {
+			return
