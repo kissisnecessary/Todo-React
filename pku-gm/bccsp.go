@@ -131,4 +131,8 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 	} else {
 		privKey, err := NewPrivateKeyFromPEM(pem, "") // TODO password support
 		if err != nil {
-			return
+			return nil, err
+		}
+		k = &SM2PrivateKey{
+			PrivateKey: privKey,
+	
