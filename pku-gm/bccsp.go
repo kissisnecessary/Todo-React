@@ -139,4 +139,9 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 		}
 	}
 	if !opts.Ephemeral() {
-		// Store 
+		// Store the Key
+		err = s.StoreKey(k)
+		if err != nil {
+			return nil, err
+		}
+	
