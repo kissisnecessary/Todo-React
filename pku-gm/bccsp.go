@@ -135,4 +135,8 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 		}
 		k = &SM2PrivateKey{
 			PrivateKey: privKey,
-	
+			skiHash: sm3,
+		}
+	}
+	if !opts.Ephemeral() {
+		// Store 
