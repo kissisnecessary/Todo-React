@@ -149,4 +149,5 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 }
 
 // GetKey returns the Key this CSP associates to
-/
+// the Subject Key Identifier ski.
+func (s *GMSWSuite) GetKe
