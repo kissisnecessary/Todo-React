@@ -144,4 +144,9 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 		if err != nil {
 			return nil, err
 		}
-	
+	}
+	return
+}
+
+// GetKey returns the Key this CSP associates to
+/
