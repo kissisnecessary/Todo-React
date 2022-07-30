@@ -151,4 +151,9 @@ func (s *GMSWSuite) KeyImport(raw interface{}, opts KeyImportOpts) (k Key, err e
 // GetKey returns the Key this CSP associates to
 // the Subject Key Identifier ski.
 func (s *GMSWSuite) GetKey(ski []byte) (k Key, err error) {
-	k, err = s.KeyStore.GetKe
+	k, err = s.KeyStore.GetKey(ski)
+	return
+}
+
+// Hash hashes messages msg using options opts.
+// I
