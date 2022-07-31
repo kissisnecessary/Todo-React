@@ -157,4 +157,4 @@ func (s *GMSWSuite) GetKey(ski []byte) (k Key, err error) {
 
 // Hash hashes messages msg using options opts.
 // If opts is nil, the default hash function will be used.
-f
+func (s *GMSWSuite) Hash(msg []byte, opts HashOpts) (h
