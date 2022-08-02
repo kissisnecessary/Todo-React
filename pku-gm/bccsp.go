@@ -162,4 +162,7 @@ func (s *GMSWSuite) Hash(msg []byte, opts HashOpts) (hash []byte, err error) {
 	if err != nil {
 		return nil, err
 	}
-	has
+	hashAlgo.Reset()
+	hashAlgo.Write(msg)
+	hash = hashAlgo.Sum(nil)
+	hashAlgo.Re
