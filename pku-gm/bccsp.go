@@ -165,4 +165,8 @@ func (s *GMSWSuite) Hash(msg []byte, opts HashOpts) (hash []byte, err error) {
 	hashAlgo.Reset()
 	hashAlgo.Write(msg)
 	hash = hashAlgo.Sum(nil)
-	hashAlgo.Re
+	hashAlgo.Reset()
+	return
+}
+
+// GetHash returns and instance of hash.Hash usin
