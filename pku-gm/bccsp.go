@@ -170,4 +170,5 @@ func (s *GMSWSuite) Hash(msg []byte, opts HashOpts) (hash []byte, err error) {
 }
 
 // GetHash returns and instance of hash.Hash using options opts.
-// If opts is nil, the default hash functi
+// If opts is nil, the default hash function will be returned.
+func (s *GMSWSuite) GetHash(opts HashOpts) (h 
