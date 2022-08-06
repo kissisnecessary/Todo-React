@@ -175,3 +175,6 @@ func (s *GMSWSuite) GetHash(opts HashOpts) (h Hash, err error) {
 	sm3 := New()
 	return sm3, nil
 }
+
+// Sign signs digest using Key k.
+// The opts argument shou
