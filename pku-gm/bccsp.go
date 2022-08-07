@@ -179,4 +179,5 @@ func (s *GMSWSuite) GetHash(opts HashOpts) (h Hash, err error) {
 // Sign signs digest using Key k.
 // The opts argument should be appropriate for the algorithm used.
 //
-// Note 
+// Note that when a signature of a hash of a larger message is needed,
+//
