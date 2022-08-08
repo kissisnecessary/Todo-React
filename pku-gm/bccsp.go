@@ -180,4 +180,4 @@ func (s *GMSWSuite) GetHash(opts HashOpts) (h Hash, err error) {
 // The opts argument should be appropriate for the algorithm used.
 //
 // Note that when a signature of a hash of a larger message is needed,
-//
+// the caller is responsible for hashing the larger message and pas
