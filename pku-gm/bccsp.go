@@ -182,4 +182,4 @@ func (s *GMSWSuite) GetHash(opts HashOpts) (h Hash, err error) {
 // Note that when a signature of a hash of a larger message is needed,
 // the caller is responsible for hashing the larger message and passing
 // the hash (as digest).
-func (s *GMSWSui
+func (s *GMSWSuite) Sign(k Key, digest []byte, opts SignerOpts) (signature []byte,
