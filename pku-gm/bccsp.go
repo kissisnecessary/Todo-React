@@ -184,4 +184,8 @@ func (s *GMSWSuite) GetHash(opts HashOpts) (h Hash, err error) {
 // the hash (as digest).
 func (s *GMSWSuite) Sign(k Key, digest []byte, opts SignerOpts) (signature []byte, err error) {
 	sm2PrivK := k.(*SM2PrivateKey)
-	signature, err =
+	signature, err = sm2PrivK.Sign("sm2sign", digest, nil)
+	return
+}
+
+// Veri
