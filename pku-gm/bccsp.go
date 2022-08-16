@@ -189,4 +189,5 @@ func (s *GMSWSuite) Sign(k Key, digest []byte, opts SignerOpts) (signature []byt
 }
 
 // Verify verifies signature against Key k and digest
-// The opts argume
+// The opts argument should be appropriate for the algorithm used.
+func (s *GM
