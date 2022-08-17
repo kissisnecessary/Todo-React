@@ -191,4 +191,5 @@ func (s *GMSWSuite) Sign(k Key, digest []byte, opts SignerOpts) (signature []byt
 // Verify verifies signature against Key k and digest
 // The opts argument should be appropriate for the algorithm used.
 func (s *GMSWSuite) Verify(k Key, signature, digest []byte, opts SignerOpts) (valid bool, err error) {
-	sm2PubK 
+	sm2PubK := k.(*SM2PublicKey)
+	err = sm2PubK.Key.Verify("
