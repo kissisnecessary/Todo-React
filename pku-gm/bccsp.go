@@ -196,4 +196,5 @@ func (s *GMSWSuite) Verify(k Key, signature, digest []byte, opts SignerOpts) (va
 	return err == nil, err
 }
 
-// Encr
+// Encrypt encrypts plaintext using Key k.
+// The opts arg
