@@ -198,4 +198,4 @@ func (s *GMSWSuite) Verify(k Key, signature, digest []byte, opts SignerOpts) (va
 
 // Encrypt encrypts plaintext using Key k.
 // The opts argument should be appropriate for the algorithm used.
-func (s 
+func (s *GMSWSuite) Encrypt(k Key, plaintext []byte, opts EncrypterOpts) (ciphertext []byt
