@@ -201,4 +201,8 @@ func (s *GMSWSuite) Verify(k Key, signature, digest []byte, opts SignerOpts) (va
 func (s *GMSWSuite) Encrypt(k Key, plaintext []byte, opts EncrypterOpts) (ciphertext []byte, err error) {
 	sm2PubK := k.(*SM2PublicKey)
 	ciphertext, err = sm2PubK.Key.Encrypt("sm2encrypt-with-sm3", plaintext, nil)
-	
+	return
+}
+
+// Decrypt decrypts ciphertext using Key k.
+//
