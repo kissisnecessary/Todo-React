@@ -206,4 +206,4 @@ func (s *GMSWSuite) Encrypt(k Key, plaintext []byte, opts EncrypterOpts) (cipher
 
 // Decrypt decrypts ciphertext using Key k.
 // The opts argument should be appropriate for the algorithm used.
-fu
+func (s *GMSWSuite) Decrypt(k Key, ciphertext []byte, opts Decrypter
