@@ -208,4 +208,6 @@ func (s *GMSWSuite) Encrypt(k Key, plaintext []byte, opts EncrypterOpts) (cipher
 // The opts argument should be appropriate for the algorithm used.
 func (s *GMSWSuite) Decrypt(k Key, ciphertext []byte, opts DecrypterOpts) (plaintext []byte, err error) {
 	sm2PrivK := k.(*SM2PrivateKey)
-	plaintext, err = sm2PrivK.Decrypt("sm2encrypt-with-s
+	plaintext, err = sm2PrivK.Decrypt("sm2encrypt-with-sm3", ciphertext, nil)
+	return
+}
