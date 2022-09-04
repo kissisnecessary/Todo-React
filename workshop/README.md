@@ -7,4 +7,7 @@
 - 其他
 
 ## 步骤
-1
+1. 编译项目
+### terminal 1
+`cd server && go build .`
+### te
