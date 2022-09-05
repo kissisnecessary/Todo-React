@@ -10,4 +10,8 @@
 1. 编译项目
 ### terminal 1
 `cd server && go build .`
-### te
+### terminal 2
+`cd client && go build .`
+1. 生成密钥并配置
+### terminal 2
+`.
