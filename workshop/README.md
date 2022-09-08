@@ -17,4 +17,8 @@
 `./client ./ generate`
 `mv pub.pem ../server`
 1. 启动服务器
-###
+### terminal 1
+`./server ./`
+1. 通过命令行发送请求
+### terminal 2
+`./c
