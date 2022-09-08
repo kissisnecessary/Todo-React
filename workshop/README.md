@@ -14,4 +14,7 @@
 `cd client && go build .`
 1. 生成密钥并配置
 ### terminal 2
-`.
+`./client ./ generate`
+`mv pub.pem ../server`
+1. 启动服务器
+###
