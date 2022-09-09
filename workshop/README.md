@@ -22,4 +22,7 @@
 1. 通过命令行发送请求
 ### terminal 2
 `./client ./ sign 127.0.0.1:8080`
-`./client ./ decrypt 127.0.0.1
+`./client ./ decrypt 127.0.0.1:8080`
+`./client ./ sm4 127.0.0.1:8080`
+## 设计
+- serv
