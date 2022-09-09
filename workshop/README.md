@@ -21,4 +21,5 @@
 `./server ./`
 1. 通过命令行发送请求
 ### terminal 2
-`./c
+`./client ./ sign 127.0.0.1:8080`
+`./client ./ decrypt 127.0.0.1
