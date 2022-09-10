@@ -25,4 +25,9 @@
 `./client ./ decrypt 127.0.0.1:8080`
 `./client ./ sm4 127.0.0.1:8080`
 ## 设计
-- serv
+- server/client restapi接口
+- 通用load key，sign，verify接口
+- 底层基础库实现（支撑）
+
+## 相关资源
+- [课件
