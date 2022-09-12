@@ -32,4 +32,4 @@
 ## 相关资源
 - [课件1](./国密1030.pdf)
 - [课件2](./国密workshop.pdf)
-- [视频 Bili
+- [视频 BiliBili](https://www.bilibili.com/video/BV1zU4y1T7
