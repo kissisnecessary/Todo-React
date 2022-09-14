@@ -1,3 +1,6 @@
 package workshop
 
-impor
+import (
+	"crypto/rand"
+
+	ccs "github.com/Hyperledger-TWGC/ccs
