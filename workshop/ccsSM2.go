@@ -9,4 +9,7 @@ import (
 
 type CCSSM2 struct {
 	PrivateKey *ccs.PrivateKey
-	Pu
+	PublicKey  *ccs.PublicKey
+}
+
+func NewCCSSM2() (*C
