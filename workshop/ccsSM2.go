@@ -13,4 +13,8 @@ type CCSSM2 struct {
 }
 
 func NewCCSSM2() (*CCSSM2, error) {
-	PrivateKey, err := ccs.GenerateKey(rand.R
+	PrivateKey, err := ccs.GenerateKey(rand.Reader)
+	if err != nil {
+		return nil, err
+	}
+	return &CCSSM2{Priva
