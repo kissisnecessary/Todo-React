@@ -17,4 +17,6 @@ func NewCCSSM2() (*CCSSM2, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &CCSSM2{Priva
+	return &CCSSM2{PrivateKey: PrivateKey, PublicKey: &PrivateKey.PublicKey}, nil
+}
+
