@@ -37,4 +37,4 @@ func (instance *CCSSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 	if err != nil {
 		return
 	}
-	pubPE
+	pubPEM, err = ccsutils.PublicKeyToPEM(instance.PublicKey, nil)
