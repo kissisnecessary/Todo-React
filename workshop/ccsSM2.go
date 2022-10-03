@@ -46,3 +46,7 @@ func (instance *CCSSM2) Encrypt(msg []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	return encrypted, nil
+}
+
+func (instance *CCSSM2) Decrypt(encry
