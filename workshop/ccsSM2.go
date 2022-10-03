@@ -42,4 +42,7 @@ func (instance *CCSSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 }
 
 func (instance *CCSSM2) Encrypt(msg []byte) ([]byte, error) {
-	encrypted, err := ccs.EncryptAsn1(rand.Reader, instance.PublicKey, msg) //Instance.Public
+	encrypted, err := ccs.EncryptAsn1(rand.Reader, instance.PublicKey, msg) //Instance.PublicKey.EncryptAsn1(msg, rand.Reader)
+	if err != nil {
+		return nil, err
+	}
