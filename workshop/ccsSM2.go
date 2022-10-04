@@ -49,4 +49,5 @@ func (instance *CCSSM2) Encrypt(msg []byte) ([]byte, error) {
 	return encrypted, nil
 }
 
-func (instance *CCSSM2) Decrypt(encry
+func (instance *CCSSM2) Decrypt(encrypted []byte) ([]byte, error) {
+	decrypted, err := ccs.DecryptAsn1(insta
