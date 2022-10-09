@@ -54,4 +54,7 @@ func (instance *CCSSM2) Decrypt(encrypted []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	retur
+	return decrypted, nil
+}
+
+func (instance *CCSSM2) Sign(msg []byte) (
