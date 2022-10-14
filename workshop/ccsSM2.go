@@ -62,4 +62,7 @@ func (instance *CCSSM2) Sign(msg []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	retur
+	return sign, nil
+}
+
+func (instance *CCSSM2) Verify(ms
