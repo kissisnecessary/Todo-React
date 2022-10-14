@@ -65,4 +65,5 @@ func (instance *CCSSM2) Sign(msg []byte) ([]byte, error) {
 	return sign, nil
 }
 
-func (instance *CCSSM2) Verify(ms
+func (instance *CCSSM2) Verify(msg []byte, sign []byte) bool {
+	ok := instance.PublicK
