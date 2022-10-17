@@ -71,4 +71,5 @@ func (instance *CCSSM2) Verify(msg []byte, sign []byte) bool {
 }
 
 //TODO
-func (instance *C
+func (instance *CCSSM2) SaveFile(priFile, pubFile string) error {
+	ret
