@@ -72,4 +72,5 @@ func (instance *CCSSM2) Verify(msg []byte, sign []byte) bool {
 
 //TODO
 func (instance *CCSSM2) SaveFile(priFile, pubFile string) error {
-	ret
+	return nil
+}
