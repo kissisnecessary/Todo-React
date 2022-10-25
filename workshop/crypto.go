@@ -8,4 +8,6 @@ func DegistAndSign(msg []byte, priv SM2) ([]byte, error) {
 }
 
 func DegistAndVerify(msg, sign []byte, pub SM2) bool {
-	tj_
+	tj_digest := tjsm3.Sm3Sum(msg)
+	return pub.Verify(tj_digest, sign)
+}
