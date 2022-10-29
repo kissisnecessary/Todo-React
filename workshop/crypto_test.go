@@ -6,4 +6,6 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-var source, priv, pub wor
+var source, priv, pub workshop.SM2
+var SM4Key  workshop.SM4
+var priFile = "priv.p
