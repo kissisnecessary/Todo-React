@@ -8,4 +8,6 @@ import (
 
 var source, priv, pub workshop.SM2
 var SM4Key  workshop.SM4
-var priFile = "priv.p
+var priFile = "priv.pem"
+var pubFile = "pub.pem"
+var msg = []byte("2021-
