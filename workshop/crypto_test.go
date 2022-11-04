@@ -14,4 +14,4 @@ var msg = []byte("2021-07-03 13:44:10")
 var err error
 var _ = Describe("Crypto", func() {
 	// generate keypair file via tj or ccs
-	It("it should able to ge
+	It("it should able to generate keypair and store in file", func(
