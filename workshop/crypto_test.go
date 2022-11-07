@@ -16,4 +16,5 @@ var _ = Describe("Crypto", func() {
 	// generate keypair file via tj or ccs
 	It("it should able to generate keypair and store in file", func() {
 		source, err = workshop.GenerateSM2Instance(workshop.TJ)
-		Exp
+		Expect(err).NotTo(HaveOccurred())
+		err = source.SaveFile(priFile,
