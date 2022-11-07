@@ -17,4 +17,6 @@ var _ = Describe("Crypto", func() {
 	It("it should able to generate keypair and store in file", func() {
 		source, err = workshop.GenerateSM2Instance(workshop.TJ)
 		Expect(err).NotTo(HaveOccurred())
-		err = source.SaveFile(priFile,
+		err = source.SaveFile(priFile, pubFile)
+		Expect(err).NotTo(HaveOccurred())
+		
