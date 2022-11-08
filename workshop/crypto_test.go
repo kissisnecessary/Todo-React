@@ -19,4 +19,5 @@ var _ = Describe("Crypto", func() {
 		Expect(err).NotTo(HaveOccurred())
 		err = source.SaveFile(priFile, pubFile)
 		Expect(err).NotTo(HaveOccurred())
-		
+		SM4Key, err = workshop.GenerateSM4Instance(workshop.TJ)
+	
