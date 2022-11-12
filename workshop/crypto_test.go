@@ -22,4 +22,5 @@ var _ = Describe("Crypto", func() {
 		SM4Key, err = workshop.GenerateSM4Instance(workshop.TJ)
 	})
 	// general function for degist hash, sign
-	It("it should able to complete degist via sm3 
+	It("it should able to complete degist via sm3 then sign, verify", func() {
+		priv, err = workshop.Loa
