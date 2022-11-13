@@ -25,4 +25,5 @@ var _ = Describe("Crypto", func() {
 	It("it should able to complete degist via sm3 then sign, verify", func() {
 		priv, err = workshop.LoadFromPriPem(priFile)
 		Expect(err).NotTo(HaveOccurred())
-		pub, e
+		pub, err = workshop.LoadFromPubPem(pubFile)
+		Expect(err
