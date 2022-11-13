@@ -23,4 +23,6 @@ var _ = Describe("Crypto", func() {
 	})
 	// general function for degist hash, sign
 	It("it should able to complete degist via sm3 then sign, verify", func() {
-		priv, err = workshop.Loa
+		priv, err = workshop.LoadFromPriPem(priFile)
+		Expect(err).NotTo(HaveOccurred())
+		pub, e
