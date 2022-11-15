@@ -27,4 +27,5 @@ var _ = Describe("Crypto", func() {
 		Expect(err).NotTo(HaveOccurred())
 		pub, err = workshop.LoadFromPubPem(pubFile)
 		Expect(err).NotTo(HaveOccurred())
-		sign, err := workshop.DegistAndSig
+		sign, err := workshop.DegistAndSign(msg, priv)
+		Expect(err).NotTo(HaveOccurred(
