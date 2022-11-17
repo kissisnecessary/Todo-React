@@ -28,4 +28,6 @@ var _ = Describe("Crypto", func() {
 		pub, err = workshop.LoadFromPubPem(pubFile)
 		Expect(err).NotTo(HaveOccurred())
 		sign, err := workshop.DegistAndSign(msg, priv)
-		Expect(err).NotTo(HaveOccurred(
+		Expect(err).NotTo(HaveOccurred())
+		// general function for degist hash, verify
+		ok := workshop
