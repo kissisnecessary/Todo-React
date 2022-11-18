@@ -31,4 +31,7 @@ var _ = Describe("Crypto", func() {
 		Expect(err).NotTo(HaveOccurred())
 		// general function for degist hash, verify
 		ok := workshop.DegistAndVerify(msg, sign, pub)
-		Expect(ok).To(BeTrue(
+		Expect(ok).To(BeTrue())
+	})
+	// general function for encrypt
+	It("it should able to complete
