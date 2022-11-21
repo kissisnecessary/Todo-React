@@ -34,4 +34,5 @@ var _ = Describe("Crypto", func() {
 		Expect(ok).To(BeTrue())
 	})
 	// general function for encrypt
-	It("it should able to complete
+	It("it should able to complete sm2 encrypt and decrypt", func() {
+		encrypted, err := pub
