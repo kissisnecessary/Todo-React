@@ -37,4 +37,5 @@ var _ = Describe("Crypto", func() {
 	It("it should able to complete sm2 encrypt and decrypt", func() {
 		encrypted, err := pub.Encrypt(msg)
 		Expect(err).NotTo(HaveOccurred())
-		de
+		decrypted, err := priv.Decrypt(encrypted)
+		Expect(err).NotT
