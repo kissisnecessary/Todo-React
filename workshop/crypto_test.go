@@ -35,4 +35,6 @@ var _ = Describe("Crypto", func() {
 	})
 	// general function for encrypt
 	It("it should able to complete sm2 encrypt and decrypt", func() {
-		encrypted, err := pub
+		encrypted, err := pub.Encrypt(msg)
+		Expect(err).NotTo(HaveOccurred())
+		de
