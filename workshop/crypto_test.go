@@ -40,4 +40,6 @@ var _ = Describe("Crypto", func() {
 		decrypted, err := priv.Decrypt(encrypted)
 		Expect(err).NotTo(HaveOccurred())
 		Expect(encrypted).NotTo(Equal(msg))
-		
+		Expect(decrypted).To(Equal(msg))
+	})
+	// general fu
