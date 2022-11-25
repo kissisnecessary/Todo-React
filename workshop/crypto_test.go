@@ -43,4 +43,6 @@ var _ = Describe("Crypto", func() {
 		Expect(decrypted).To(Equal(msg))
 	})
 	// general function for sm4 encrypt
-	It("it should able to complete sm4 encrypt 
+	It("it should able to complete sm4 encrypt and decrypt", func() {
+		encrypted, err := SM4Key.Encrypt(msg,"ecb")
+		
