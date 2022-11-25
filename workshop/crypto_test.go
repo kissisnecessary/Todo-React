@@ -42,4 +42,5 @@ var _ = Describe("Crypto", func() {
 		Expect(encrypted).NotTo(Equal(msg))
 		Expect(decrypted).To(Equal(msg))
 	})
-	// general fu
+	// general function for sm4 encrypt
+	It("it should able to complete sm4 encrypt 
