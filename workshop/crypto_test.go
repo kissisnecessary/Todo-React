@@ -47,4 +47,6 @@ var _ = Describe("Crypto", func() {
 		encrypted, err := SM4Key.Encrypt(msg,"ecb")
 		Expect(err).NotTo(HaveOccurred())
 		decrypted, err := SM4Key.Decrypt(encrypted,"ecb")
-		Expect(err).NotTo(HaveOccurred
+		Expect(err).NotTo(HaveOccurred())
+		Expect(encrypted).NotTo(Equal(msg))
+		Expect(d
