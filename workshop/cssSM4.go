@@ -15,3 +15,18 @@ func (instance *CCSSM4) Encrypt(msg []byte, mode string) ([]byte, error) {
 	case "ecb":
 		return ccs.Sm4Ecb(instance.Key, msg, ccs.ENC)
 	case "cbc":
+		return ccs.Sm4Cbc(instance.Key, msg, ccs.ENC)
+	default:
+		return ccs.Sm4Ecb(instance.Key, msg, ccs.ENC)
+	}
+}
+func (instance *CCSSM4) Decrypt(encrypted []byte, mode string) ([]byte, error) {
+	switch mode {
+	case "ecb":
+		return ccs.Sm4Ecb(instance.Key, encrypted, ccs.DEC)
+	case "cbc":
+		return ccs.Sm4Cbc(instance.Key, encrypted, ccs.DEC)
+	default:
+		return ccs.Sm4Ecb(instance.Key, encrypted, ccs.DEC)
+	}
+}
