@@ -9,4 +9,8 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	. "github
+	. "github.com/onsi/gomega/gbytes"
+)
+
+var (
+	PrivFile, PubFile
