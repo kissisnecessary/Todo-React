@@ -2,4 +2,9 @@ package workshop_test
 
 import (
 	"io/ioutil"
-	"os
+	"os"
+	"os/exec"
+
+	"github.com/onsi/gomega/gexec"
+
+	. "gi
