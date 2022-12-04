@@ -7,4 +7,6 @@ import (
 
 	"github.com/onsi/gomega/gexec"
 
-	. "gi
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
+	. "github
