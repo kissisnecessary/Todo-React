@@ -13,4 +13,5 @@ import (
 )
 
 var (
-	PrivFile, PubFile
+	PrivFile, PubFile            *os.File
+	tmpDir, serverBin, clientBin st
