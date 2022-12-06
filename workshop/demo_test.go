@@ -14,4 +14,5 @@ import (
 
 var (
 	PrivFile, PubFile            *os.File
-	tmpDir, serverBin, clientBin st
+	tmpDir, serverBin, clientBin string
+	serverSession, clientSession *gexec.Session
