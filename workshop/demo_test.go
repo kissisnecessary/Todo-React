@@ -16,3 +16,8 @@ var (
 	PrivFile, PubFile            *os.File
 	tmpDir, serverBin, clientBin string
 	serverSession, clientSession *gexec.Session
+)
+
+var _ = Describe("Server", func() {
+
+	BeforeSuite(
