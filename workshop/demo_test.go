@@ -20,4 +20,6 @@ var (
 
 var _ = Describe("Server", func() {
 
-	BeforeSuite(
+	BeforeSuite(func() {
+		tmpDir, err = ioutil.TempDir("", "workshop-e2e-")
+		E
