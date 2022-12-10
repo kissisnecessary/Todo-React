@@ -24,4 +24,7 @@ var _ = Describe("Server", func() {
 		tmpDir, err = ioutil.TempDir("", "workshop-e2e-")
 		Expect(err).NotTo(HaveOccurred())
 
-		serverBin, err = gexec.Build("
+		serverBin, err = gexec.Build("./server")
+		Expect(err).NotTo(HaveOccurred())
+
+		clientBin, err =
