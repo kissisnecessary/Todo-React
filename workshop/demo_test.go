@@ -27,4 +27,8 @@ var _ = Describe("Server", func() {
 		serverBin, err = gexec.Build("./server")
 		Expect(err).NotTo(HaveOccurred())
 
-		clientBin, err =
+		clientBin, err = gexec.Build("./client")
+		Expect(err).NotTo(HaveOccurred())
+	})
+
+	Befo
