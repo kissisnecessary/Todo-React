@@ -31,4 +31,5 @@ var _ = Describe("Server", func() {
 		Expect(err).NotTo(HaveOccurred())
 	})
 
-	Befo
+	BeforeEach(func() {
+		cmd := exec.Command(clientBin, tmpDi
