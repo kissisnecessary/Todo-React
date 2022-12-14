@@ -32,4 +32,5 @@ var _ = Describe("Server", func() {
 	})
 
 	BeforeEach(func() {
-		cmd := exec.Command(clientBin, tmpDi
+		cmd := exec.Command(clientBin, tmpDir, "generate")
+		clientSession, err = gexec.Start(cmd, n
