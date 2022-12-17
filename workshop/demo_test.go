@@ -34,4 +34,5 @@ var _ = Describe("Server", func() {
 	BeforeEach(func() {
 		cmd := exec.Command(clientBin, tmpDir, "generate")
 		clientSession, err = gexec.Start(cmd, nil, nil)
-		Eventually(clientSession.Out).Should(Say("ge
+		Eventually(clientSession.Out).Should(Say("generate key pair at " + tmpDir))
+		Expect(err).No
