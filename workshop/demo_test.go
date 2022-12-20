@@ -43,4 +43,7 @@ var _ = Describe("Server", func() {
 			serverSession.Kill()
 		}
 
-		if cl
+		if clientSession != nil {
+			clientSession.Kill()
+		}
+	})
