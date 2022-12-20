@@ -39,4 +39,8 @@ var _ = Describe("Server", func() {
 	})
 
 	AfterEach(func() {
-		if serve
+		if serverSession != nil {
+			serverSession.Kill()
+		}
+
+		if cl
