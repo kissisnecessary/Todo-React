@@ -47,3 +47,7 @@ var _ = Describe("Server", func() {
 			clientSession.Kill()
 		}
 	})
+
+	AfterSuite(func() {
+		os.RemoveAll(tmpDir)
+		os.
