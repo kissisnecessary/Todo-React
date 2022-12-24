@@ -54,4 +54,6 @@ var _ = Describe("Server", func() {
 		os.Remove(clientBin)
 	})
 
-	// start server
+	// start server with public key via tj
+	Context("init functions", func() {
+		It(
