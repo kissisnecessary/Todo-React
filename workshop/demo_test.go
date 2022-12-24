@@ -50,4 +50,8 @@ var _ = Describe("Server", func() {
 
 	AfterSuite(func() {
 		os.RemoveAll(tmpDir)
-		os.
+		os.Remove(serverBin)
+		os.Remove(clientBin)
+	})
+
+	// start server
