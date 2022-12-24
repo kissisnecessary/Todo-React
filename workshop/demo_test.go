@@ -56,4 +56,5 @@ var _ = Describe("Server", func() {
 
 	// start server with public key via tj
 	Context("init functions", func() {
-		It(
+		It("should start server", func() {
+			cmd := exec.Command(serverBin
