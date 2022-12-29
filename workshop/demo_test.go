@@ -57,4 +57,6 @@ var _ = Describe("Server", func() {
 	// start server with public key via tj
 	Context("init functions", func() {
 		It("should start server", func() {
-			cmd := exec.Command(serverBin
+			cmd := exec.Command(serverBin, tmpDir)
+			serverSession, err = gexec.Start(cmd, nil, nil)
+			
