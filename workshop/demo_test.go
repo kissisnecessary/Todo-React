@@ -59,4 +59,9 @@ var _ = Describe("Server", func() {
 		It("should start server", func() {
 			cmd := exec.Command(serverBin, tmpDir)
 			serverSession, err = gexec.Start(cmd, nil, nil)
-			Eventually(serverSession.Out).Should(Say("start serve
+			Eventually(serverSession.Out).Should(Say("start server"))
+			Expect(err).NotTo(HaveOccurred())
+		})
+	})
+
+	
