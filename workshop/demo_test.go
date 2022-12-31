@@ -65,4 +65,5 @@ var _ = Describe("Server", func() {
 	})
 
 	// client send request via private key vai ccs
-	Context("se
+	Context("server client interact", func() {
+		It("verfiy & sign intera
