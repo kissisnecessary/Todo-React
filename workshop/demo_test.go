@@ -69,4 +69,5 @@ var _ = Describe("Server", func() {
 		It("verfiy & sign interact", func() {
 			server_cmd := exec.Command(serverBin, tmpDir)
 			serverSession, err = gexec.Start(server_cmd, nil, nil)
-			Expec
+			Expect(err).NotTo(HaveOccurred())
+			Eventually(serverSession.Out).Shoul
