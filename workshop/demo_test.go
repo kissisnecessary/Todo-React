@@ -66,4 +66,6 @@ var _ = Describe("Server", func() {
 
 	// client send request via private key vai ccs
 	Context("server client interact", func() {
-		It("verfiy & sign intera
+		It("verfiy & sign interact", func() {
+			server_cmd := exec.Command(serverBin, tmpDir)
+			serve
