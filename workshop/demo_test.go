@@ -68,4 +68,5 @@ var _ = Describe("Server", func() {
 	Context("server client interact", func() {
 		It("verfiy & sign interact", func() {
 			server_cmd := exec.Command(serverBin, tmpDir)
-			serve
+			serverSession, err = gexec.Start(server_cmd, nil, nil)
+			Expec
