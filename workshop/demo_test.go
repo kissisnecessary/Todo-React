@@ -72,4 +72,5 @@ var _ = Describe("Server", func() {
 			Expect(err).NotTo(HaveOccurred())
 			Eventually(serverSession.Out).Should(Say("start server"))
 
-			client_cmd := exec.Command(cl
+			client_cmd := exec.Command(clientBin, tmpDir, "sign", "127.0.0.1:8080")
+			clientSe
