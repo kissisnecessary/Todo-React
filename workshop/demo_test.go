@@ -81,4 +81,5 @@ var _ = Describe("Server", func() {
 
 			Eventually(clientSession.Out).Should(Say("true"))
 		})
-		It("decrypt & encrypt inte
+		It("decrypt & encrypt interact", func() {
+			server_cmd := exec.Command(serve
