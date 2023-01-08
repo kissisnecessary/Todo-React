@@ -79,4 +79,6 @@ var _ = Describe("Server", func() {
 
 			//Eventually(serverSession.Out).Should(Say("verify"))
 
-			Eventually(clientS
+			Eventually(clientSession.Out).Should(Say("true"))
+		})
+		It("decrypt & encrypt inte
