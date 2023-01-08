@@ -77,4 +77,6 @@ var _ = Describe("Server", func() {
 			Expect(err).NotTo(HaveOccurred())
 			Eventually(clientSession.Out).Should(Say("sign"))
 
-			//Eventually(serverSess
+			//Eventually(serverSession.Out).Should(Say("verify"))
+
+			Eventually(clientS
