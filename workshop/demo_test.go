@@ -75,4 +75,6 @@ var _ = Describe("Server", func() {
 			client_cmd := exec.Command(clientBin, tmpDir, "sign", "127.0.0.1:8080")
 			clientSession, err = gexec.Start(client_cmd, nil, nil)
 			Expect(err).NotTo(HaveOccurred())
-			Eventually(clientSessi
+			Eventually(clientSession.Out).Should(Say("sign"))
+
+			//Eventually(serverSess
