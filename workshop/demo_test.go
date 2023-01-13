@@ -83,4 +83,6 @@ var _ = Describe("Server", func() {
 		})
 		It("decrypt & encrypt interact", func() {
 			server_cmd := exec.Command(serverBin, tmpDir)
-			serverSession, err = gexec.Start(server_c
+			serverSession, err = gexec.Start(server_cmd, nil, nil)
+			Expect(err).NotTo(HaveOccurred())
+			Eve
