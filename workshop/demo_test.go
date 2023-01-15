@@ -92,4 +92,6 @@ var _ = Describe("Server", func() {
 			Expect(err).NotTo(HaveOccurred())
 			Eventually(clientSession.Out).Should(Say("decrypt"))
 
-			//Eventually(server
+			//Eventually(serverSession.Out).Should(Say("verify"))
+
+			Eventually(clientSession.Out).Shoul
