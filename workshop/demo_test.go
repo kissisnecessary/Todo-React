@@ -94,4 +94,7 @@ var _ = Describe("Server", func() {
 
 			//Eventually(serverSession.Out).Should(Say("verify"))
 
-			Eventually(clientSession.Out).Shoul
+			Eventually(clientSession.Out).Should(Say("true"))
+		})
+		It("sm4 interact", func() {
+			server_cmd := exe
