@@ -103,4 +103,5 @@ var _ = Describe("Server", func() {
 			Eventually(serverSession.Out).Should(Say("start server"))
 
 			client_cmd := exec.Command(clientBin, tmpDir, "sm4", "127.0.0.1:8080")
-			clientSession, e
+			clientSession, err = gexec.Start(client_cmd, nil, nil)
+			Expect(err).NotTo(HaveO
