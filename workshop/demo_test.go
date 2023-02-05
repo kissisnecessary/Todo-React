@@ -104,4 +104,5 @@ var _ = Describe("Server", func() {
 
 			client_cmd := exec.Command(clientBin, tmpDir, "sm4", "127.0.0.1:8080")
 			clientSession, err = gexec.Start(client_cmd, nil, nil)
-			Expect(err).NotTo(HaveO
+			Expect(err).NotTo(HaveOccurred())
+			Eventually(clientSession.Out).Should(Say("sm4 decrypt")
