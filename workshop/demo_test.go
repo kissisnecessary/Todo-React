@@ -109,4 +109,7 @@ var _ = Describe("Server", func() {
 
 			//Eventually(serverSession.Out).Should(Say("verify"))
 
-			Eventually(c
+			Eventually(clientSession.Out).Should(Say("true"))
+		})
+	})
+})
