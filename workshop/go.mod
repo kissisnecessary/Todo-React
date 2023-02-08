@@ -8,3 +8,5 @@ require (
 	github.com/emicklei/go-restful/v3 v3.8.0
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/onsi/ginkgo v1.16.4
+	github.com/onsi/gomega v1.13.0
+)
