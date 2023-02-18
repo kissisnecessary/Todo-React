@@ -4,4 +4,5 @@ import (
 	"crypto/rand"
 	"os"
 
-	tj "github.c
+	tj "github.com/Hyperledger-TWGC/tjfoc-gm/sm2"
+	tjx509 "github.com/Hype
