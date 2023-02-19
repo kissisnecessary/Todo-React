@@ -10,4 +10,7 @@ import (
 
 type TJSM2 struct {
 	PrivateKey *tj.PrivateKey
-	
+	PublicKey  *tj.PublicKey
+}
+
+func NewTJSM2() (*TJSM2, error) 
