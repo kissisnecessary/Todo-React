@@ -13,4 +13,5 @@ type TJSM2 struct {
 	PublicKey  *tj.PublicKey
 }
 
-func NewTJSM2() (*TJSM2, error) 
+func NewTJSM2() (*TJSM2, error) {
+	PrivateKey, err := tj.GenerateKey(rand.Reader)
