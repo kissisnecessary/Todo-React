@@ -15,3 +15,7 @@ type TJSM2 struct {
 
 func NewTJSM2() (*TJSM2, error) {
 	PrivateKey, err := tj.GenerateKey(rand.Reader)
+	if err != nil {
+		return nil, err
+	}
+	return &TJSM2{Priva
