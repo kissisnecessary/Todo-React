@@ -21,4 +21,4 @@ func NewTJSM2() (*TJSM2, error) {
 	return &TJSM2{PrivateKey: PrivateKey, PublicKey: &PrivateKey.PublicKey}, nil
 }
 
-fu
+func TJImportKey(privPEM []byte, pubPEM []byte) (*TJSM2, error
