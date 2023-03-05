@@ -36,3 +36,6 @@ func TJImportKey(privPEM []byte, pubPEM []byte) (*TJSM2, error) {
 func (instance *TJSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 	privPEM, err = tjx509.WritePrivateKeyToPem(instance.PrivateKey, nil)
 	if err != nil {
+		return
+	}
+	pubPEM, err = tjx509.WritePublicKeyToPem(inst
