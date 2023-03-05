@@ -38,4 +38,8 @@ func (instance *TJSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 	if err != nil {
 		return
 	}
-	pubPEM, err = tjx509.WritePublicKeyToPem(inst
+	pubPEM, err = tjx509.WritePublicKeyToPem(instance.PublicKey)
+	return
+}
+
+func (instance *TJSM2) Encrypt(msg []byte) 
