@@ -43,4 +43,8 @@ func (instance *TJSM2) ExportKey() (privPEM []byte, pubPEM []byte, err error) {
 }
 
 func (instance *TJSM2) Encrypt(msg []byte) ([]byte, error) {
-	encrypted, err := instance.PublicKey.EncryptAsn
+	encrypted, err := instance.PublicKey.EncryptAsn1(msg, rand.Reader)
+	if err != nil {
+		return nil, err
+	}
+	return enc
