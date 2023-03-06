@@ -50,4 +50,5 @@ func (instance *TJSM2) Encrypt(msg []byte) ([]byte, error) {
 	return encrypted, nil
 }
 
-func (instance *TJSM2) Decrypt(encrypted []byte) 
+func (instance *TJSM2) Decrypt(encrypted []byte) ([]byte, error) {
+	decrypted, err := instance.P
