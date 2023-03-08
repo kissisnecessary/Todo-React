@@ -58,4 +58,6 @@ func (instance *TJSM2) Decrypt(encrypted []byte) ([]byte, error) {
 	return decrypted, nil
 }
 
-func (instance *TJSM2) Sign
+func (instance *TJSM2) Sign(msg []byte) ([]byte, error) {
+	
+	sign, err := i
