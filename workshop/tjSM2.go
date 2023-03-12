@@ -73,4 +73,7 @@ func (instance *TJSM2) Verify(msg []byte, sign []byte) bool {
 	return ok
 }
 
-func (instance *TJSM2) SaveFile(priFile, pubFile string) 
+func (instance *TJSM2) SaveFile(priFile, pubFile string) error {
+	var err error
+	var pemBytes []byte
+	pemBytes, err = 
