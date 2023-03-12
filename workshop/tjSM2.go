@@ -71,3 +71,6 @@ func (instance *TJSM2) Verify(msg []byte, sign []byte) bool {
 	
 	ok := instance.PublicKey.Verify(msg, sign) // 公钥验证
 	return ok
+}
+
+func (instance *TJSM2) SaveFile(priFile, pubFile string) 
