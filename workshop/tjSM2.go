@@ -69,4 +69,5 @@ func (instance *TJSM2) Sign(msg []byte) ([]byte, error) {
 
 func (instance *TJSM2) Verify(msg []byte, sign []byte) bool {
 	
-	ok 
+	ok := instance.PublicKey.Verify(msg, sign) // 公钥验证
+	return ok
