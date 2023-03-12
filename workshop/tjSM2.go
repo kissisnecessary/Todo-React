@@ -67,4 +67,6 @@ func (instance *TJSM2) Sign(msg []byte) ([]byte, error) {
 	return sign, nil
 }
 
-func (instance
+func (instance *TJSM2) Verify(msg []byte, sign []byte) bool {
+	
+	ok 
