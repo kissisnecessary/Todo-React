@@ -77,4 +77,7 @@ func (instance *TJSM2) SaveFile(priFile, pubFile string) error {
 	var err error
 	var pemBytes []byte
 	pemBytes, err = tjx509.WritePrivateKeyToPem(instance.PrivateKey, nil)
-	i
+	if err != nil {
+		return err
+	}
+	err = WriteFile(pemByt
