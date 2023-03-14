@@ -76,4 +76,5 @@ func (instance *TJSM2) Verify(msg []byte, sign []byte) bool {
 func (instance *TJSM2) SaveFile(priFile, pubFile string) error {
 	var err error
 	var pemBytes []byte
-	pemBytes, err = 
+	pemBytes, err = tjx509.WritePrivateKeyToPem(instance.PrivateKey, nil)
+	i
