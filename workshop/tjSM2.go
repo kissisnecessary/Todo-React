@@ -86,4 +86,8 @@ func (instance *TJSM2) SaveFile(priFile, pubFile string) error {
 	}
 	pemBytes, err = tjx509.WritePublicKeyToPem(instance.PublicKey)
 	if err != nil {
-		retur
+		return err
+	}
+	err = WriteFile(pemBytes, pubFile)
+	if err != nil {
+		return err
