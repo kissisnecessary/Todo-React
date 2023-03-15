@@ -91,3 +91,8 @@ func (instance *TJSM2) SaveFile(priFile, pubFile string) error {
 	err = WriteFile(pemBytes, pubFile)
 	if err != nil {
 		return err
+	}
+	return err
+}
+
+func WriteFile(content []byte, filename st
