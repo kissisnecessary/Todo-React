@@ -95,4 +95,6 @@ func (instance *TJSM2) SaveFile(priFile, pubFile string) error {
 	return err
 }
 
-func WriteFile(content []byte, filename st
+func WriteFile(content []byte, filename string) error {
+	var err error
+	var file *os.F
