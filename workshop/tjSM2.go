@@ -97,4 +97,7 @@ func (instance *TJSM2) SaveFile(priFile, pubFile string) error {
 
 func WriteFile(content []byte, filename string) error {
 	var err error
-	var file *os.F
+	var file *os.File
+	file, err = os.Create(filename)
+	defer func() {
+	
