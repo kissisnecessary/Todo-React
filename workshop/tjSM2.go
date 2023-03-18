@@ -104,3 +104,4 @@ func WriteFile(content []byte, filename string) error {
 	}()
 	_, err = file.Write(content)
 	return err
+}
