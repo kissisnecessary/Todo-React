@@ -100,4 +100,7 @@ func WriteFile(content []byte, filename string) error {
 	var file *os.File
 	file, err = os.Create(filename)
 	defer func() {
-	
+		err = file.Close()
+	}()
+	_, err = file.Write(content)
+	return err
