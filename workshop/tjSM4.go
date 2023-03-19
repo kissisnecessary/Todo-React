@@ -6,4 +6,5 @@ type TJSM4 struct {
 	Key []byte
 }
 
-func N
+func NewTJSM4() (*TJSM4, error) {
+	key := []byte("0123456789abcdef"
