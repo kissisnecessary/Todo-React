@@ -12,4 +12,6 @@ func NewTJSM4() (*TJSM4, error) {
 }
 func (instance *TJSM4) Encrypt(msg []byte, mode string) ([]byte, error) {
 	switch mode {
-	case "ec
+	case "ecb":
+		return tj.Sm4Ecb(instance.Key, msg, true)
+	case "cbc":
