@@ -17,4 +17,6 @@ func (instance *TJSM4) Encrypt(msg []byte, mode string) ([]byte, error) {
 	case "cbc":
 		return tj.Sm4Cbc(instance.Key, msg, true)
 	case "cfb":
-		return tj.Sm4CFB(ins
+		return tj.Sm4CFB(instance.Key, msg, true)
+	case "ofb":
+		return tj.Sm4OFB(instance.Key, 
