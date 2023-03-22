@@ -24,4 +24,7 @@ func (instance *TJSM4) Encrypt(msg []byte, mode string) ([]byte, error) {
 		return tj.Sm4Ecb(instance.Key, msg, true)
 	}
 }
-func (instance *TJSM4) Decrypt(encrypted []byte, mode st
+func (instance *TJSM4) Decrypt(encrypted []byte, mode string) ([]byte, error) {
+	switch mode {
+	case "ecb":
+		retu
