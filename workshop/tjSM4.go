@@ -28,4 +28,6 @@ func (instance *TJSM4) Decrypt(encrypted []byte, mode string) ([]byte, error) {
 	switch mode {
 	case "ecb":
 		return tj.Sm4Ecb(instance.Key, encrypted, false)
-	case "cb
+	case "cbc":
+		return tj.Sm4Cbc(instance.Key, encrypted, false)
+	cas
