@@ -27,4 +27,5 @@ func (instance *TJSM4) Encrypt(msg []byte, mode string) ([]byte, error) {
 func (instance *TJSM4) Decrypt(encrypted []byte, mode string) ([]byte, error) {
 	switch mode {
 	case "ecb":
-		retu
+		return tj.Sm4Ecb(instance.Key, encrypted, false)
+	case "cb
