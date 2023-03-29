@@ -33,4 +33,6 @@ func (instance *TJSM4) Decrypt(encrypted []byte, mode string) ([]byte, error) {
 	case "cfb":
 		return tj.Sm4CFB(instance.Key, encrypted, false)
 	case "ofb":
-		return tj.Sm4OFB(instance.Key, encry
+		return tj.Sm4OFB(instance.Key, encrypted, false)
+	default:
+		return tj.Sm4Ecb(instance.Key, encryp
