@@ -2,4 +2,6 @@ package workshop
 
 type SM2 interface {
 	Encrypt(msg []byte) ([]byte, error)
-	Decrypt(encrypted []by
+	Decrypt(encrypted []byte) ([]byte, error)
+	Sign(msg []byte) ([]byte, error)
+	Verify(msg [
