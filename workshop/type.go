@@ -6,4 +6,7 @@ type SM2 interface {
 	Sign(msg []byte) ([]byte, error)
 	Verify(msg []byte, sign []byte) bool
 	ExportKey() (privPEM []byte, pubPEM []byte, err error)
-	SaveFile(priFile, pubFile string)
+	SaveFile(priFile, pubFile string) error
+}
+type SM4 interface{
+	Encrypt(msg []byte,mode string)([]byte,error)
