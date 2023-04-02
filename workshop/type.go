@@ -10,3 +10,5 @@ type SM2 interface {
 }
 type SM4 interface{
 	Encrypt(msg []byte,mode string)([]byte,error)
+	Decrypt(encrypted []byte,mode string)([]byte,error)
+}
