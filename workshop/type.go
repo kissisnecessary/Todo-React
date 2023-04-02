@@ -5,4 +5,5 @@ type SM2 interface {
 	Decrypt(encrypted []byte) ([]byte, error)
 	Sign(msg []byte) ([]byte, error)
 	Verify(msg []byte, sign []byte) bool
-	ExportKey() (privPEM [
+	ExportKey() (privPEM []byte, pubPEM []byte, err error)
+	SaveFile(priFile, pubFile string)
